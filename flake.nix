@@ -48,7 +48,7 @@
                 ];
 
                 shellHook = ''
-                    export PATH=$PATH:"./node_modules/.bin"
+                    export PATH=$PATH:"$PWD/node_modules/.bin"
 
                     # If atcoder-cli is not installed, install it and login
                     command -v acc &> /dev/null || (npm install atcoder-cli && acc login)
