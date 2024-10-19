@@ -48,7 +48,9 @@
                 ];
 
                 shellHook = ''
-                    export PATH=$PATH:"$PWD/node_modules/.bin"
+                    ROOT=$PWD
+
+                    export PATH=$PATH:"$ROOT/node_modules/.bin"
 
                     # If atcoder-cli is not installed, install it and login
                     command -v acc &> /dev/null || (npm install atcoder-cli && acc login)
@@ -61,6 +63,15 @@
                     alias t='oj t -c "runghc -outputdir=.dest Main.hs"'
                     alias s='acc s'
                     alias ts='t && s'
+
+                    new() {
+                        acc new $1
+                        cd $1
+                        cp -r $ROOT/stack-template/* .
+                        sed -i "s/<contest-id>/$1/g" hie.yaml
+                        sed -i "s/<package-name>/$1/g" package.yaml
+                        stack build
+                    }
                 '';
             };
         }

@@ -1,0 +1,23 @@
+cradle:
+  stack:
+    - path: "./a/Main.hs"
+      component: "<contest-id>:exe:a-exe"
+
+    - path: "./b/Main.hs"
+      component: "<contest-id>:exe:b-exe"
+
+    - path: "./c/Main.hs"
+      component: "<contest-id>:exe:c-exe"
+
+    - path: "./d/Main.hs"
+      component: "<contest-id>:exe:d-exe"
+
+    - path: "./e/Main.hs"
+      component: "<contest-id>:exe:e-exe"
+
+    - path: "./f/Main.hs"
+      component: "<contest-id>:exe:f-exe"
+
+    - path: "./g/Main.hs"
+      component: "<contest-id>:exe:g-exe"
+      
