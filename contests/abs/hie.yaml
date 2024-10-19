@@ -1,0 +1,34 @@
+cradle:
+  stack:
+    - path: "./practicea/Main.hs"
+      component: "abs:exe:practicea-exe"
+
+    - path: "./abc049c/Main.hs"
+      component: "abs:exe:abc049c-exe"
+
+    - path: "./abc081a/Main.hs"
+      component: "abs:exe:abc081a-exe"
+
+    - path: "./abc081b/Main.hs"
+      component: "abs:exe:abc081b-exe"
+
+    - path: "./abc083b/Main.hs"
+      component: "abs:exe:abc083b-exe"
+
+    - path: "./abc085b/Main.hs"
+      component: "abs:exe:abc085b-exe"
+
+    - path: "./abc085c/Main.hs"
+      component: "abs:exe:abc085c-exe"
+
+    - path: "./abc086a/Main.hs"
+      component: "abs:exe:abc086a-exe"
+
+    - path: "./abc086c/Main.hs"
+      component: "abs:exe:abc086c-exe"
+
+    - path: "./abc087b/Main.hs"
+      component: "abs:exe:abc087b-exe"
+
+    - path: "./abc088b/Main.hs"
+      component: "abs:exe:abc088b-exe"
