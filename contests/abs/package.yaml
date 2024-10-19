@@ -87,6 +87,11 @@ executables:
     <<: *exe-defaults
     source-dirs: "abc085c"
     main: Main.hs
+
+  abc086a-exe:
+    <<: *exe-defaults
+    source-dirs: "abc086a"
+    main: Main.hs
   
   abc086c-exe:
     <<: *exe-defaults
