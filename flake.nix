@@ -15,10 +15,10 @@
         {
             devShells.default = with pkgs; mkShell {
                 nativeBuildInputs = [
-                    pkg-config
-                    stack
-                    cabal-install
-                    llvmPackages.bintools
+                    # pkg-config
+                    # stack
+                    # cabal-install
+                    # llvmPackages.bintools
                 ];
 
                 packages = [
@@ -26,11 +26,11 @@
 
                     online-judge-tools
                     nodejs
-                    hlint
+                    # hlint
 
                     # lts-21.6
-                    haskell.compiler.ghc946
-                    (haskell-language-server.override { supportedGhcVersions = [ "946" ]; })
+                    # haskell.compiler.ghc946
+                    # (haskell-language-server.override { supportedGhcVersions = [ "946" ]; })
 
                     # lts-21.15
                     # haskell.compiler.ghc947
@@ -39,12 +39,12 @@
                     # lts-22.0
                     # haskell.compiler.ghc963
                     # (haskell-language-server.override { supportedGhcVersions = [ "963" ]; })
-                    haskellPackages.hoogle
-                    haskellPackages.ghcid
-                    haskellPackages.ghcide
-                    haskellPackages.ghci-dap
-                    haskellPackages.haskell-dap
-                    haskellPackages.haskell-debug-adapter
+                    # haskellPackages.hoogle
+                    # haskellPackages.ghcid
+                    # haskellPackages.ghcide
+                    # haskellPackages.ghci-dap
+                    # haskellPackages.haskell-dap
+                    # haskellPackages.haskell-debug-adapter
                 ];
 
                 shellHook = ''
@@ -57,6 +57,10 @@
                     [ -L "$(acc config-dir)/haskell" ] || (mkdir -p "$(acc config-dir)/haskell" && ln -s "$PWD/acc-config" "$ACC_CONFIG_PATH")
 
                     acc config oj-path $(which oj)
+
+                    alias t='oj t -c "runghc -outputdir=.dest Main.hs"'
+                    alias s='acc s'
+                    alias ts='t && s'
                 '';
             };
         }
