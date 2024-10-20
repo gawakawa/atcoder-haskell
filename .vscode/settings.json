@@ -1,4 +1,8 @@
 {
+    "haskell.formattingProvider": "fourmolu",
+    "haskell.ghcupExecutablePath": "ghcup",
+    "haskell.manageHLS": "GHCup",
+    "haskell.plugin.fourmolu.config.external": true,
     "haskell.toolchain": {
         "ghc": "9.4.5",
         "hls": "2.2.0.0",
