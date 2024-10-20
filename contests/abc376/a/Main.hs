@@ -1,4 +1,5 @@
 {-# LANGUAGE StrictData #-}
+{-# OPTIONS_GHC -Wno-unused-imports #-}
 
 module Main where
 
