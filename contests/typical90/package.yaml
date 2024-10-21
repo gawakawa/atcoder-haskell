@@ -1,0 +1,505 @@
+name: typical90
+
+dependencies:
+   - base
+
+   - QuickCheck
+   - array
+   - attoparsec
+   - bytestring
+   - containers
+   - deepseq
+   - extra
+   - fgl
+   - hashable
+   - heaps
+   - integer-logarithms
+   - lens
+   - massiv
+   - mono-traversable
+   - mtl
+   - mutable-containers
+   - mwc-random
+   - parallel
+   - parsec
+   - primitive
+   - psqueues
+   - random
+   - reflection
+   - template-haskell
+   - text
+   - tf-random
+   - transformers
+   - unboxing-vector
+   - unordered-containers
+   - utility-ht
+   - vector
+   - vector-algorithms
+   - vector-th-unbox
+
+language: GHC2021
+
+# DRY for package.yaml executables:
+# <https://www.reddit.com/r/haskell/comments/haeqin/dry_for_packageyaml_executables/>
+_exe-defs: &exe-defaults
+  # dependencies:
+  # - abs
+  ghc-options:
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -Wall # all warnings
+  other-modules: []
+
+# REMARK: See `README` for the langauge server support.
+executables:
+  001-exe:
+    <<: *exe-defaults
+    source-dirs: "001"
+    main: Main.hs
+
+  002-exe:
+    <<: *exe-defaults
+    source-dirs: "002"
+    main: Main.hs
+
+  003-exe:
+    <<: *exe-defaults
+    source-dirs: "003"
+    main: Main.hs
+
+  004-exe:
+    <<: *exe-defaults
+    source-dirs: "004"
+    main: Main.hs
+
+  005-exe:
+    <<: *exe-defaults
+    source-dirs: "005"
+    main: Main.hs
+
+  006-exe:
+    <<: *exe-defaults
+    source-dirs: "006"
+    main: Main.hs
+
+  007-exe:
+    <<: *exe-defaults
+    source-dirs: "007"
+    main: Main.hs
+
+  008-exe:
+    <<: *exe-defaults
+    source-dirs: "008"
+    main: Main.hs
+
+  009-exe:
+    <<: *exe-defaults
+    source-dirs: "009"
+    main: Main.hs
+
+  010-exe:
+    <<: *exe-defaults
+    source-dirs: "010"
+    main: Main.hs
+
+  011-exe:
+    <<: *exe-defaults
+    source-dirs: "011"
+    main: Main.hs
+
+  012-exe:
+    <<: *exe-defaults
+    source-dirs: "012"
+    main: Main.hs
+
+  013-exe:
+    <<: *exe-defaults
+    source-dirs: "013"
+    main: Main.hs
+
+  014-exe:
+    <<: *exe-defaults
+    source-dirs: "014"
+    main: Main.hs
+
+  015-exe:
+    <<: *exe-defaults
+    source-dirs: "015"
+    main: Main.hs
+
+  016-exe:
+    <<: *exe-defaults
+    source-dirs: "016"
+    main: Main.hs
+
+  017-exe:
+    <<: *exe-defaults
+    source-dirs: "017"
+    main: Main.hs
+
+  018-exe:
+    <<: *exe-defaults
+    source-dirs: "018"
+    main: Main.hs
+
+  019-exe:
+    <<: *exe-defaults
+    source-dirs: "019"
+    main: Main.hs
+
+  020-exe:
+    <<: *exe-defaults
+    source-dirs: "020"
+    main: Main.hs
+
+  021-exe:
+    <<: *exe-defaults
+    source-dirs: "021"
+    main: Main.hs
+
+  022-exe:
+    <<: *exe-defaults
+    source-dirs: "022"
+    main: Main.hs
+
+  023-exe:
+    <<: *exe-defaults
+    source-dirs: "023"
+    main: Main.hs
+
+  024-exe:
+    <<: *exe-defaults
+    source-dirs: "024"
+    main: Main.hs
+
+  025-exe:
+    <<: *exe-defaults
+    source-dirs: "025"
+    main: Main.hs
+
+  026-exe:
+    <<: *exe-defaults
+    source-dirs: "026"
+    main: Main.hs
+
+  027-exe:
+    <<: *exe-defaults
+    source-dirs: "027"
+    main: Main.hs
+
+  028-exe:
+    <<: *exe-defaults
+    source-dirs: "028"
+    main: Main.hs
+
+  029-exe:
+    <<: *exe-defaults
+    source-dirs: "029"
+    main: Main.hs
+
+  030-exe:
+    <<: *exe-defaults
+    source-dirs: "030"
+    main: Main.hs
+
+  031-exe:
+    <<: *exe-defaults
+    source-dirs: "031"
+    main: Main.hs
+
+  032-exe:
+    <<: *exe-defaults
+    source-dirs: "032"
+    main: Main.hs
+
+  033-exe:
+    <<: *exe-defaults
+    source-dirs: "033"
+    main: Main.hs
+
+  034-exe:
+    <<: *exe-defaults
+    source-dirs: "034"
+    main: Main.hs
+
+  035-exe:
+    <<: *exe-defaults
+    source-dirs: "035"
+    main: Main.hs
+
+  036-exe:
+    <<: *exe-defaults
+    source-dirs: "036"
+    main: Main.hs
+
+  037-exe:
+    <<: *exe-defaults
+    source-dirs: "037"
+    main: Main.hs
+
+  038-exe:
+    <<: *exe-defaults
+    source-dirs: "038"
+    main: Main.hs
+
+  039-exe:
+    <<: *exe-defaults
+    source-dirs: "039"
+    main: Main.hs
+
+  040-exe:
+    <<: *exe-defaults
+    source-dirs: "040"
+    main: Main.hs
+
+  041-exe:
+    <<: *exe-defaults
+    source-dirs: "041"
+    main: Main.hs
+
+  042-exe:
+    <<: *exe-defaults
+    source-dirs: "042"
+    main: Main.hs
+
+  043-exe:
+    <<: *exe-defaults
+    source-dirs: "043"
+    main: Main.hs
+
+  044-exe:
+    <<: *exe-defaults
+    source-dirs: "044"
+    main: Main.hs
+
+  045-exe:
+    <<: *exe-defaults
+    source-dirs: "045"
+    main: Main.hs
+
+  046-exe:
+    <<: *exe-defaults
+    source-dirs: "046"
+    main: Main.hs
+
+  047-exe:
+    <<: *exe-defaults
+    source-dirs: "047"
+    main: Main.hs
+
+  048-exe:
+    <<: *exe-defaults
+    source-dirs: "048"
+    main: Main.hs
+
+  049-exe:
+    <<: *exe-defaults
+    source-dirs: "049"
+    main: Main.hs
+
+  050-exe:
+    <<: *exe-defaults
+    source-dirs: "050"
+    main: Main.hs
+
+  051-exe:
+    <<: *exe-defaults
+    source-dirs: "051"
+    main: Main.hs
+
+  052-exe:
+    <<: *exe-defaults
+    source-dirs: "052"
+    main: Main.hs
+
+  053-exe:
+    <<: *exe-defaults
+    source-dirs: "053"
+    main: Main.hs
+
+  054-exe:
+    <<: *exe-defaults
+    source-dirs: "054"
+    main: Main.hs
+
+  055-exe:
+    <<: *exe-defaults
+    source-dirs: "055"
+    main: Main.hs
+
+  056-exe:
+    <<: *exe-defaults
+    source-dirs: "056"
+    main: Main.hs
+
+  057-exe:
+    <<: *exe-defaults
+    source-dirs: "057"
+    main: Main.hs
+
+  058-exe:
+    <<: *exe-defaults
+    source-dirs: "058"
+    main: Main.hs
+
+  059-exe:
+    <<: *exe-defaults
+    source-dirs: "059"
+    main: Main.hs
+
+  060-exe:
+    <<: *exe-defaults
+    source-dirs: "060"
+    main: Main.hs
+
+  061-exe:
+    <<: *exe-defaults
+    source-dirs: "061"
+    main: Main.hs
+
+  062-exe:
+    <<: *exe-defaults
+    source-dirs: "062"
+    main: Main.hs
+
+  063-exe:
+    <<: *exe-defaults
+    source-dirs: "063"
+    main: Main.hs
+
+  064-exe:
+    <<: *exe-defaults
+    source-dirs: "064"
+    main: Main.hs
+
+  065-exe:
+    <<: *exe-defaults
+    source-dirs: "065"
+    main: Main.hs
+
+  066-exe:
+    <<: *exe-defaults
+    source-dirs: "066"
+    main: Main.hs
+
+  067-exe:
+    <<: *exe-defaults
+    source-dirs: "067"
+    main: Main.hs
+
+  068-exe:
+    <<: *exe-defaults
+    source-dirs: "068"
+    main: Main.hs
+
+  069-exe:
+    <<: *exe-defaults
+    source-dirs: "069"
+    main: Main.hs
+
+  070-exe:
+    <<: *exe-defaults
+    source-dirs: "070"
+    main: Main.hs
+
+  071-exe:
+    <<: *exe-defaults
+    source-dirs: "071"
+    main: Main.hs
+
+  072-exe:
+    <<: *exe-defaults
+    source-dirs: "072"
+    main: Main.hs
+
+  073-exe:
+    <<: *exe-defaults
+    source-dirs: "073"
+    main: Main.hs
+
+  074-exe:
+    <<: *exe-defaults
+    source-dirs: "074"
+    main: Main.hs
+
+  075-exe:
+    <<: *exe-defaults
+    source-dirs: "075"
+    main: Main.hs
+
+  076-exe:
+    <<: *exe-defaults
+    source-dirs: "076"
+    main: Main.hs
+
+  077-exe:
+    <<: *exe-defaults
+    source-dirs: "077"
+    main: Main.hs
+
+  078-exe:
+    <<: *exe-defaults
+    source-dirs: "078"
+    main: Main.hs
+
+  079-exe:
+    <<: *exe-defaults
+    source-dirs: "079"
+    main: Main.hs
+
+  080-exe:
+    <<: *exe-defaults
+    source-dirs: "080"
+    main: Main.hs
+
+  081-exe:
+    <<: *exe-defaults
+    source-dirs: "081"
+    main: Main.hs
+
+  082-exe:
+    <<: *exe-defaults
+    source-dirs: "082"
+    main: Main.hs
+
+  083-exe:
+    <<: *exe-defaults
+    source-dirs: "083"
+    main: Main.hs
+
+  084-exe:
+    <<: *exe-defaults
+    source-dirs: "084"
+    main: Main.hs
+
+  085-exe:
+    <<: *exe-defaults
+    source-dirs: "085"
+    main: Main.hs
+
+  086-exe:
+    <<: *exe-defaults
+    source-dirs: "086"
+    main: Main.hs
+
+  087-exe:
+    <<: *exe-defaults
+    source-dirs: "087"
+    main: Main.hs
+
+  088-exe:
+    <<: *exe-defaults
+    source-dirs: "088"
+    main: Main.hs
+
+  089-exe:
+    <<: *exe-defaults
+    source-dirs: "089"
+    main: Main.hs
+
+  090-exe:
+    <<: *exe-defaults
+    source-dirs: "090"
+    main: Main.hs
+    

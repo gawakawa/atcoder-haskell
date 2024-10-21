@@ -1,0 +1,271 @@
+cradle:
+  stack:
+    - path: "./001/Main.hs"
+      component: "typical90:exe:001-exe"
+
+    - path: "./002/Main.hs"
+      component: "typical90:exe:002-exe"
+
+    - path: "./003/Main.hs"
+      component: "typical90:exe:003-exe"
+
+    - path: "./004/Main.hs"
+      component: "typical90:exe:004-exe"
+
+    - path: "./005/Main.hs"
+      component: "typical90:exe:005-exe"
+
+    - path: "./006/Main.hs"
+      component: "typical90:exe:006-exe"
+
+    - path: "./007/Main.hs"
+      component: "typical90:exe:007-exe"
+
+    - path: "./008/Main.hs"
+      component: "typical90:exe:008-exe"
+
+    - path: "./009/Main.hs"
+      component: "typical90:exe:009-exe"
+
+    - path: "./010/Main.hs"
+      component: "typical90:exe:010-exe"
+
+    - path: "./011/Main.hs"
+      component: "typical90:exe:011-exe"
+
+    - path: "./012/Main.hs"
+      component: "typical90:exe:012-exe"
+
+    - path: "./013/Main.hs"
+      component: "typical90:exe:013-exe"
+
+    - path: "./014/Main.hs"
+      component: "typical90:exe:014-exe"
+
+    - path: "./015/Main.hs"
+      component: "typical90:exe:015-exe"
+
+    - path: "./016/Main.hs"
+      component: "typical90:exe:016-exe"
+
+    - path: "./017/Main.hs"
+      component: "typical90:exe:017-exe"
+
+    - path: "./018/Main.hs"
+      component: "typical90:exe:018-exe"
+
+    - path: "./019/Main.hs"
+      component: "typical90:exe:019-exe"
+
+    - path: "./020/Main.hs"
+      component: "typical90:exe:020-exe"
+
+    - path: "./021/Main.hs"
+      component: "typical90:exe:021-exe"
+
+    - path: "./022/Main.hs"
+      component: "typical90:exe:022-exe"
+
+    - path: "./023/Main.hs"
+      component: "typical90:exe:023-exe"
+
+    - path: "./024/Main.hs"
+      component: "typical90:exe:024-exe"
+
+    - path: "./025/Main.hs"
+      component: "typical90:exe:025-exe"
+
+    - path: "./026/Main.hs"
+      component: "typical90:exe:026-exe"
+
+    - path: "./027/Main.hs"
+      component: "typical90:exe:027-exe"
+
+    - path: "./028/Main.hs"
+      component: "typical90:exe:028-exe"
+
+    - path: "./029/Main.hs"
+      component: "typical90:exe:029-exe"
+
+    - path: "./030/Main.hs"
+      component: "typical90:exe:030-exe"
+
+    - path: "./031/Main.hs"
+      component: "typical90:exe:031-exe"
+
+    - path: "./032/Main.hs"
+      component: "typical90:exe:032-exe"
+
+    - path: "./033/Main.hs"
+      component: "typical90:exe:033-exe"
+
+    - path: "./034/Main.hs"
+      component: "typical90:exe:034-exe"
+
+    - path: "./035/Main.hs"
+      component: "typical90:exe:035-exe"
+
+    - path: "./036/Main.hs"
+      component: "typical90:exe:036-exe"
+
+    - path: "./037/Main.hs"
+      component: "typical90:exe:037-exe"
+
+    - path: "./038/Main.hs"
+      component: "typical90:exe:038-exe"
+
+    - path: "./039/Main.hs"
+      component: "typical90:exe:039-exe"
+
+    - path: "./040/Main.hs"
+      component: "typical90:exe:040-exe"
+
+    - path: "./041/Main.hs"
+      component: "typical90:exe:041-exe"
+
+    - path: "./042/Main.hs"
+      component: "typical90:exe:042-exe"
+
+    - path: "./043/Main.hs"
+      component: "typical90:exe:043-exe"
+
+    - path: "./044/Main.hs"
+      component: "typical90:exe:044-exe"
+
+    - path: "./045/Main.hs"
+      component: "typical90:exe:045-exe"
+
+    - path: "./046/Main.hs"
+      component: "typical90:exe:046-exe"
+
+    - path: "./047/Main.hs"
+      component: "typical90:exe:047-exe"
+
+    - path: "./048/Main.hs"
+      component: "typical90:exe:048-exe"
+
+    - path: "./049/Main.hs"
+      component: "typical90:exe:049-exe"
+
+    - path: "./050/Main.hs"
+      component: "typical90:exe:050-exe"
+
+    - path: "./051/Main.hs"
+      component: "typical90:exe:051-exe"
+
+    - path: "./052/Main.hs"
+      component: "typical90:exe:052-exe"
+
+    - path: "./053/Main.hs"
+      component: "typical90:exe:053-exe"
+
+    - path: "./054/Main.hs"
+      component: "typical90:exe:054-exe"
+
+    - path: "./055/Main.hs"
+      component: "typical90:exe:055-exe"
+
+    - path: "./056/Main.hs"
+      component: "typical90:exe:056-exe"
+
+    - path: "./057/Main.hs"
+      component: "typical90:exe:057-exe"
+
+    - path: "./058/Main.hs"
+      component: "typical90:exe:058-exe"
+
+    - path: "./059/Main.hs"
+      component: "typical90:exe:059-exe"
+
+    - path: "./060/Main.hs"
+      component: "typical90:exe:060-exe"
+
+    - path: "./061/Main.hs"
+      component: "typical90:exe:061-exe"
+
+    - path: "./062/Main.hs"
+      component: "typical90:exe:062-exe"
+
+    - path: "./063/Main.hs"
+      component: "typical90:exe:063-exe"
+
+    - path: "./064/Main.hs"
+      component: "typical90:exe:064-exe"
+
+    - path: "./065/Main.hs"
+      component: "typical90:exe:065-exe"
+
+    - path: "./066/Main.hs"
+      component: "typical90:exe:066-exe"
+
+    - path: "./067/Main.hs"
+      component: "typical90:exe:067-exe"
+
+    - path: "./068/Main.hs"
+      component: "typical90:exe:068-exe"
+
+    - path: "./069/Main.hs"
+      component: "typical90:exe:069-exe"
+
+    - path: "./070/Main.hs"
+      component: "typical90:exe:070-exe"
+
+    - path: "./071/Main.hs"
+      component: "typical90:exe:071-exe"
+
+    - path: "./072/Main.hs"
+      component: "typical90:exe:072-exe"
+
+    - path: "./073/Main.hs"
+      component: "typical90:exe:073-exe"
+
+    - path: "./074/Main.hs"
+      component: "typical90:exe:074-exe"
+
+    - path: "./075/Main.hs"
+      component: "typical90:exe:075-exe"
+
+    - path: "./076/Main.hs"
+      component: "typical90:exe:076-exe"
+
+    - path: "./077/Main.hs"
+      component: "typical90:exe:077-exe"
+
+    - path: "./078/Main.hs"
+      component: "typical90:exe:078-exe"
+
+    - path: "./079/Main.hs"
+      component: "typical90:exe:079-exe"
+
+    - path: "./080/Main.hs"
+      component: "typical90:exe:080-exe"
+
+    - path: "./081/Main.hs"
+      component: "typical90:exe:081-exe"
+
+    - path: "./082/Main.hs"
+      component: "typical90:exe:082-exe"
+
+    - path: "./083/Main.hs"
+      component: "typical90:exe:083-exe"
+
+    - path: "./084/Main.hs"
+      component: "typical90:exe:084-exe"
+
+    - path: "./085/Main.hs"
+      component: "typical90:exe:085-exe"
+
+    - path: "./086/Main.hs"
+      component: "typical90:exe:086-exe"
+
+    - path: "./087/Main.hs"
+      component: "typical90:exe:087-exe"
+
+    - path: "./088/Main.hs"
+      component: "typical90:exe:088-exe"
+
+    - path: "./089/Main.hs"
+      component: "typical90:exe:089-exe"
+
+    - path: "./090/Main.hs"
+      component: "typical90:exe:090-exe"
