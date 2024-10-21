@@ -1,36 +1,23 @@
-#!/usr/bin/env stack
-{- stack script --resolver lts-21.6 -}
-
-{-# LANGUAGE DataKinds #-}
-{-# LANGUAGE ImportQualifiedPost #-}
-{-# LANGUAGE NumDecimals #-}
-{-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE StrictData #-}
-{-# LANGUAGE TypeFamilies #-}
-{-# LANGUAGE TypeOperators #-}
-{-# OPTIONS_GHC -Wno-unused-imports -Wno-unused-top-binds -Wno-missing-signatures -Wno-unused-matches -funbox-small-strict-fields #-}
+{-# OPTIONS_GHC -Wno-unused-imports #-}
 
 module Main where
 
-import Control.Applicative
-import Control.Monad
-import Data.Array qualified as A
-import Data.Array.Unboxed qualified as AU
-import Data.ByteString.Char8 qualified as BS
-import Data.Char
-import Data.Function
-import Data.Int
-import Data.List qualified as L
-import Data.Maybe
-import Data.Proxy
-import Data.Reflection
-import Data.Vector qualified as V
-import Data.Vector.Generic qualified as VG
-import Data.Vector.Unboxed qualified as VU
-import Data.Vector.Unboxing qualified as Unboxing
-import GHC.TypeLits
+import Control.Monad ( replicateM )
+import Data.List ( foldl' )
 
+solve :: (Int, Int, Int) -> [ (Int, Int, Int) ] -> Bool
+solve _    []          = True
+solve from (to : rest) = reachable from to && solve to rest
+
+reachable :: (Int, Int, Int) -> (Int, Int, Int) -> Bool
+reachable (t1, x1, y1) (t2, x2, y2) =
+    (&&) <$> (>= 0) <*> even $ (t2 - t1) - abs (x1 - x2) - abs (y1 - y2)
 
 main :: IO ()
 main = do
-    undefined
+    n <- readLn :: IO Int
+    txys <- replicateM n $ do
+        [ t, x, y ] <- map read . words <$> getLine
+        pure (t, x, y) :: IO (Int, Int, Int)
+    putStrLn $ if solve (0, 0, 0) txys then "Yes" else "No"
