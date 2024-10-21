@@ -1,36 +1,22 @@
-#!/usr/bin/env stack
-{- stack script --resolver lts-21.6 -}
-
-{-# LANGUAGE DataKinds #-}
-{-# LANGUAGE ImportQualifiedPost #-}
-{-# LANGUAGE NumDecimals #-}
-{-# LANGUAGE ScopedTypeVariables #-}
 {-# LANGUAGE StrictData #-}
-{-# LANGUAGE TypeFamilies #-}
-{-# LANGUAGE TypeOperators #-}
-{-# OPTIONS_GHC -Wno-unused-imports -Wno-unused-top-binds -Wno-missing-signatures -Wno-unused-matches -funbox-small-strict-fields #-}
+{-# OPTIONS_GHC -Wno-unused-imports #-}
 
 module Main where
 
-import Control.Applicative
-import Control.Monad
-import Data.Array qualified as A
-import Data.Array.Unboxed qualified as AU
 import Data.ByteString.Char8 qualified as BS
-import Data.Char
-import Data.Function
-import Data.Int
-import Data.List qualified as L
-import Data.Maybe
-import Data.Proxy
-import Data.Reflection
-import Data.Vector qualified as V
-import Data.Vector.Generic qualified as VG
-import Data.Vector.Unboxed qualified as VU
-import Data.Vector.Unboxing qualified as Unboxing
-import GHC.TypeLits
+
+solve :: [ Char ] -> Bool
+solve s
+    | null s                = True
+    | take 7 s == "dreamer" = any (solve . flip drop s) [ 5, 7 ]
+    | take 6 s == "eraser"  = any (solve . flip drop s) [ 5, 6 ]
+    | take 5 s == "dream"   = solve $ drop 5 s
+    | take 5 s == "erase"   = solve $ drop 5 s
+    | otherwise             = False
+
 
 
 main :: IO ()
 main = do
-    undefined
+    s <- BS.unpack <$> BS.getLine
+    putStrLn $ if solve s then "YES" else "NO"
