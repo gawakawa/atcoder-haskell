@@ -60,7 +60,7 @@
 
                     acc config oj-path $(which oj)
 
-                    alias t='oj t -c "runghc -outputdir=.dest Main.hs"'
+                    alias t='oj t -c "stack runghc Main.hs"'
                     alias s='acc s'
                     alias ts='t && s'
 
