@@ -3,7 +3,14 @@
 
 module Main where
 
-import qualified Data.ByteString.Char8 as BS
+import Data.ByteString.Char8 qualified as BS
+import Data.IntMap.Strict qualified as IM
+import Data.IntSet qualified as IS
+import Data.HashMap.Strict qualified as HM
+import Data.HashSet qualified as HS
+import Data.Map.Strict qualified as M
+import Data.Set qualified as S
+import Data.Vector.Unboxed qualified as VU
 
 main :: IO ()
 main = do
