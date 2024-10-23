@@ -1,0 +1,4 @@
+cradle:
+  stack:
+    - path: "./Main.hs"
+      component: "template:exe:template-exe"
