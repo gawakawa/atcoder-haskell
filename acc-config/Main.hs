@@ -9,6 +9,7 @@ import Data.IntSet qualified as IS
 import Data.HashMap.Strict qualified as HM
 import Data.HashSet qualified as HS
 import Data.Map.Strict qualified as M
+import Data.Sequence qualified as Seq
 import Data.Set qualified as S
 import Data.Vector.Unboxed qualified as VU
 
