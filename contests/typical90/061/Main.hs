@@ -3,8 +3,24 @@
 
 module Main where
 
+import Control.Monad (replicateM)
+import Data.Maybe (fromJust)
+
 import qualified Data.ByteString.Char8 as BS
+import qualified Data.Sequence as Seq
+
+solve :: Seq.Seq Int -> [ (Int, Int) ] -> [ Int ]
+solve _    []             = []
+solve deck ((t, x) : txs) = case t of
+    1 -> solve (x Seq.<| deck) txs
+    2 -> solve (deck Seq.|> x) txs
+    3 -> fromJust (deck Seq.!? pred x) : solve deck txs
+    _ -> error "impossible"
 
 main :: IO ()
 main = do
-    undefined
+    q   <- readLn @Int
+    txs <- replicateM q $ do
+        [ t, x ] <- map (fst . fromJust . BS.readInt) . BS.words <$> BS.getLine
+        pure (t, x)
+    putStr $ unlines $ show <$> solve Seq.empty txs
