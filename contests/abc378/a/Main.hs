@@ -20,13 +20,19 @@ import Data.Array.Unboxed (UArray, (!), bounds, listArray, range)
 import Data.Bool.HT (if')
 import Data.Char (digitToInt, intToDigit)
 import Data.Functor ((<&>))
-import Data.List (foldl')
+import Data.List (foldl', sort)
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
+solve :: [ Int ] -> Int
+solve (a1 : a2 : as) = if a1 == a2 then succ $ solve as else solve $ a2 : as
+solve _              = 0
+
+
 main :: IO ()
 main = do
-    undefined
+    as <- ints
+    print $ solve $ sort as
 
 -- my lib
 ints :: IO [ Int ]
