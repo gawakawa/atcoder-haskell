@@ -24,9 +24,31 @@ import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
+solve :: VU.Vector (Int, Int) -> [ (Int, Int) ] -> [ Int ]
+solve _   []             = []
+solve qrs ((t, d) : tds) = 
+    let 
+        (q, r) = qrs VU.! t
+    in 
+    binDay q r d : solve qrs tds
+ 
+binDay :: Int -> Int -> Int -> Int
+binDay q r d = case compare (d `mod` q) r of
+    LT -> q * (d `div` q) + r
+    EQ -> d
+    GT -> q * succ (d `div` q) + r
+
 main :: IO ()
 main = do
-    undefined
+    [ n ] <- ints
+    qrs <- VU.replicateM n $ do
+        [ q, r ] <- ints
+        pure (q, r)
+    [ q ] <- ints
+    tds <- replicateM q $ do
+        [ t, d ] <- ints
+        pure (pred t, d)
+    putStr $ unlines $ show <$> solve qrs tds
 
 -- my lib
 ints :: IO [ Int ]
