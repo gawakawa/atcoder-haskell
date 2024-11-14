@@ -24,9 +24,16 @@ import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
+shiftLeft :: Int -> Int
+shiftLeft n = n `mod` 100 * 10 + n `div` 100
+
+shiftRight :: Int -> Int
+shiftRight n = n `mod` 10 * 100 + n `div` 10
+
 main :: IO ()
 main = do
-    undefined
+    [ n ] <- ints
+    putStrLn $ unwords $ show <$> [ shiftLeft n, shiftRight n ]
 
 -- my lib
 ints :: IO [ Int ]

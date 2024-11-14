@@ -24,9 +24,21 @@ import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
+solve :: Int -> [ Char ] -> Int
+solve k s = solve' 0 k s
+    where
+        solve' :: Int -> Int -> [ Char ] -> Int
+        solve' acc _   []         = acc
+        solve' acc 1   ('O' : cs) = solve' (succ acc) k cs
+        solve' acc cnt ('O' : cs) = solve' acc (pred cnt) cs
+        solve' acc _   ('X' : cs) = solve' acc k cs
+        solve' _   _   _          = error "unreachable"
+
 main :: IO ()
 main = do
-    undefined
+    [ _, k ] <- ints
+    s <- BS.unpack <$> BS.getLine
+    print $ solve k s
 
 -- my lib
 ints :: IO [ Int ]
