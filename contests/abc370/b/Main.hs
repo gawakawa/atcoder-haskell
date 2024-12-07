@@ -21,12 +21,31 @@ import Data.Bool.HT (if')
 import Data.Char (digitToInt, intToDigit)
 import Data.Functor ((<&>))
 import Data.List (foldl')
+import Data.List.Extra ((!?))
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
+solve :: UArray (Int, Int) Int -> Int
+solve mat = 
+    foldl' (\i j -> mat ! (max i j, min i j)) 1 [ 1 .. n ]
+    where
+        (_, (n, _)) = bounds mat
+
+padding :: Int -> [ Int ] -> [ Int ]
+padding n xs = xs <> replicate (n - length xs) 0
+
+toArray :: [ [ Int ] ] -> UArray (Int, Int) Int
+toArray xss =
+    listArray ((1, 1), (n, n)) $ concatMap (padding n) xss
+    where
+        n = length xss
+
 main :: IO ()
 main = do
-    undefined
+    [ n ] <- ints
+    ass <- replicateM n ints
+    let mat = toArray ass
+    print $ solve mat
 
 -- my lib
 ints :: IO [ Int ]
@@ -49,7 +68,7 @@ fromBase :: Int -> String -> Int
 fromBase n = foldl' (\acc d -> acc * n + digitToInt d) 0
 
 toBase :: Int -> Int -> String
-toBase n = liftA3 if' (== 0) 
-    (const "0") 
-    $ iterate (`div` n) >>> takeWhile (> 0) 
+toBase n = liftA3 if' (== 0)
+    (const "0")
+    $ iterate (`div` n) >>> takeWhile (> 0)
       >>> foldl' (flip $ (`mod` n) >>> intToDigit >>> (:)) ""
