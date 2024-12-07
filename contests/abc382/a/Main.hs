@@ -24,9 +24,14 @@ import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
+solve :: Int -> String -> Int
+solve d s = length (filter (== '.') s) + d
+
 main :: IO ()
 main = do
-    undefined
+    [ _, d ] <- ints
+    s <- getLine
+    print $ solve d s
 
 -- my lib
 ints :: IO [ Int ]
@@ -49,7 +54,7 @@ fromBase :: Int -> String -> Int
 fromBase n = foldl' (\acc d -> acc * n + digitToInt d) 0
 
 toBase :: Int -> Int -> String
-toBase n = liftA3 if' (== 0) 
-    (const "0") 
-    $ iterate (`div` n) >>> takeWhile (> 0) 
+toBase n = liftA3 if' (== 0)
+    (const "0")
+    $ iterate (`div` n) >>> takeWhile (> 0)
       >>> foldl' (flip $ (`mod` n) >>> intToDigit >>> (:)) ""

@@ -24,9 +24,17 @@ import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
+solve :: Int -> String -> String
+solve 0 s            = s
+solve d ('@' : rest) = '.' : solve (pred d) rest
+solve d (c : rest)   = c : solve d rest
+solve _ _            = error "unreachable"
+
 main :: IO ()
 main = do
-    undefined
+    [ _, d ] <- ints
+    s <- getLine
+    putStrLn $ reverse $ solve d $ reverse s
 
 -- my lib
 ints :: IO [ Int ]
