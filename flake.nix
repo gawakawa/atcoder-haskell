@@ -1,79 +1,110 @@
 {
-    # ref: https://github.com/toyboot4e/abc-hs/blob/main/flake.nix
-    description = "AtCoder with Haskell";
+  # ref: https://github.com/toyboot4e/abc-hs/blob/main/flake.nix
+  description = "AtCoder with Haskell";
 
-    inputs = {
-        nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
-        flake-utils.url = "github:numtide/flake-utils";
-    };
+  inputs = {
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    flake-utils.url = "github:numtide/flake-utils";
+  };
 
-    outputs = { nixpkgs, flake-utils, ... }:
-    flake-utils.lib.eachDefaultSystem (system:
-        let
-            pkgs = import nixpkgs { inherit system; };
-        in
-        {
-            devShells.default = with pkgs; mkShell {
-                nativeBuildInputs = [
-                    # pkg-config
-                    # stack
-                    # cabal-install
-                    # llvmPackages.bintools
-                ];
-
-                packages = [
-                    # atcoder-cli is from npm
-
-                    online-judge-tools
-                    nodejs
-                    # hlint
-
-                    # lts-21.6
-                    # haskell.compiler.ghc946
-                    # (haskell-language-server.override { supportedGhcVersions = [ "946" ]; })
-
-                    # lts-21.15
-                    # haskell.compiler.ghc947
-                    # (haskell-language-server.override { supportedGhcVersions = [ "947" ]; })
-
-                    # lts-22.0
-                    # haskell.compiler.ghc963
-                    # (haskell-language-server.override { supportedGhcVersions = [ "963" ]; })
-                    # haskellPackages.hoogle
-                    # haskellPackages.ghcid
-                    # haskellPackages.ghcide
-                    # haskellPackages.ghci-dap
-                    # haskellPackages.haskell-dap
-                    # haskellPackages.haskell-debug-adapter
-                ];
-
-                shellHook = ''
-                    ROOT=$PWD
-
-                    export PATH=$PATH:"$ROOT/node_modules/.bin"
-
-                    # If atcoder-cli is not installed, install it and login
-                    command -v acc &> /dev/null || (npm install atcoder-cli && acc login)
-
-                    # If acc-config is not linked, link it
-                    [ -L "$(acc config-dir)/haskell" ] || (mkdir -p "$(acc config-dir)/haskell" && ln -s "$PWD/acc-config" "$ACC_CONFIG_PATH")
-
-                    acc config oj-path $(which oj)
-
-                    alias t='oj t -c "stack runghc Main.hs"'
-                    alias s='acc s'
-                    alias ts='t && s'
-
-                    new() {
-                        acc new $1
-                        cd $1
-                        cp -r $ROOT/stack-template/* .
-                        sed -i "s/<contest-id>/$1/g" hie.yaml
-                        sed -i "s/<package-name>/$1/g" package.yaml
-                        stack build
-                    }
-                '';
+  outputs =
+    { nixpkgs, flake-utils, ... }:
+    flake-utils.lib.eachDefaultSystem (
+      system:
+      let
+        pkgs = import nixpkgs { inherit system; };
+        # atcoder-cli = pkgs.buildNpmPackage {
+        #   pname = "atcoder-cli";
+        #   version = "2.2.0";
+        #   src = pkgs.fetchFromGitHub {
+        #     owner = "Tatamo";
+        #     repo = "atcoder-cli";
+        #     rev = "f385e71ba270716f5a94e3ed9bd23a24f78799d0";
+        #     sha256 = "sha256-7pbCTgWt+khKVyMV03HanvuOX2uAC0PL9OLmqly7IWE=";
+        #   };
+        #   npmDepsHash = "sha256-ufG7Fq5D2SOzUp8KYRYUB5tYJYoADuhK+2zDfG0a3ks=";
+        #   npmPackFlags = [
+        #     "--ignore-scripts"
+        #   ];
+        #   NODE_OPTIONS = "--openssl-legacy-provider";
+        # };
+        oj-verify =
+          with pkgs.python3Packages;
+          pkgs.python3Packages.buildPythonApplication {
+            name = "verification-helper";
+            version = "5.6.0";
+            pyproject = true;
+            src = pkgs.fetchFromGitHub {
+              owner = "online-judge-tools";
+              repo = "verification-helper";
+              rev = "adbff121b1f96de5f34e9f1483eb47d661c54075";
+              fetchSubmodules = false;
+              sha256 = "sha256-f7Ge8kLRQv9uxdNGtgNsypGVY0XAnKPCg8HYQ5nT6mI=";
             };
-        }
+            build-system = [ setuptools ];
+            dependencies = [
+              colorlog
+              importlab
+              online-judge-tools
+              pyyaml
+              setuptools
+              toml
+            ];
+            propagatedBuildInputs = [ setuptools ];
+          };
+      in
+      {
+        devShells.default =
+          with pkgs;
+          mkShell {
+            buildInputs = [
+              cabal-install
+              llvmPackages.bintools
+              pkg-config
+              stack
+            ];
+
+            packages = [
+              # atcoder-cli
+              online-judge-tools
+              oj-verify
+              just
+
+              python312Packages.selenium
+              python312Packages.pyaml
+              python312Packages.importlab
+
+              haskell.compiler.ghc947
+              (haskell-language-server.override { supportedGhcVersions = [ "947" ]; })
+              haskell.packages.ghc947.cabal-fmt
+              haskell.packages.ghc947.doctest
+              haskellPackages.ghci-dap
+              haskellPackages.ghcid
+              haskellPackages.ghcide
+              haskellPackages.haskell-dap
+              haskellPackages.haskell-debug-adapter
+              haskellPackages.hoogle
+              haskellPackages.implicit-hie
+              hlint
+            ];
+
+            shellHook = ''
+              acc config oj-path $(which oj)
+
+              alias t='oj t -c "stack runghc Main.hs"'
+              alias s='acc s'
+              alias ts='t && s'
+
+              new() {
+                  acc new $1
+                  cd $1
+                  cp -r $ROOT/stack-template/* .
+                  sed -i "s/<contest-id>/$1/g" hie.yaml
+                  sed -i "s/<package-name>/$1/g" package.yaml
+                  stack build
+              }
+            '';
+          };
+      }
     );
 }
