@@ -132,18 +132,14 @@
 
             shellHook = ''
               acc config oj-path $(which oj)
+              export ROOT="$PWD"
 
-              alias t='oj t -c "stack runghc Main.hs"'
+              alias t='$ROOT/test.sh $(basename $PWD)'
               alias s='acc s'
               alias ts='t && s'
 
               new() {
-                  acc new $1
-                  cd $1
-                  cp -r $ROOT/stack-template/* .
-                  sed -i "s/<contest-id>/$1/g" hie.yaml
-                  sed -i "s/<package-name>/$1/g" package.yaml
-                  stack build
+                  $ROOT/new.sh $1
               }
             '';
           };

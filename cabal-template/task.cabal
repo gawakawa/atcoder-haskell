@@ -1,0 +1,59 @@
+cabal-version: 3.0
+name:          contest-id
+version:       0.1.0.0
+build-type:    Simple
+
+common deps
+  build-depends:
+    , base
+    , array
+    , attoparsec
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , mtl
+    , parsec
+    , text
+    , transformers
+    , unordered-containers
+    , vector
+
+  default-language: GHC2021
+  ghc-options:
+    -threaded -rtsopts -with-rtsopts=-N -Wall -O2 -optc-O3
+
+executable a
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a
+
+executable b
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b
+
+executable c
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c
+
+executable d
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: d
+
+executable e
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: e
+
+executable f
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: f
+
+executable g
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: g

@@ -1,0 +1,6 @@
+packages: ./contests/*/*.cabal
+
+-- 競技プログラミング用の最適化オプション
+package *
+  optimization: 2
+  ghc-options: -O2 -Wall -optc-O3
