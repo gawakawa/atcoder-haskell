@@ -75,14 +75,15 @@
               python312Packages.importlab
 
               haskell.compiler.ghc947
-              (haskell-language-server.override { supportedGhcVersions = [ "947" ]; })
               haskell.packages.ghc947.cabal-fmt
               haskell.packages.ghc947.doctest
+              haskellPackages.fourmolu
               haskellPackages.ghci-dap
               haskellPackages.ghcid
               haskellPackages.ghcide
               haskellPackages.haskell-dap
               haskellPackages.haskell-debug-adapter
+              haskellPackages.haskell-language-server
               haskellPackages.hoogle
               haskellPackages.implicit-hie
               hlint
