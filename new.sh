@@ -14,19 +14,65 @@ cd contests || exit 1
 acc new $CONTEST_ID
 cd $CONTEST_ID || exit 1
 
-# テンプレートファイルコピー
-cp "$ROOT_DIR/cabal-template/hie.yaml" .
-cp "$ROOT_DIR/cabal-template/task.cabal" "${CONTEST_ID}.cabal"
+# contest.acc.jsonからタスク一覧を取得
+TASKS=$(jq -r '.tasks[].label | ascii_downcase' contest.acc.json)
 
-# 置換処理
-perl -pi -e "s/contest-id/$CONTEST_ID/g" "${CONTEST_ID}.cabal"
+# cabalファイルを最初から作成
+cat > "${CONTEST_ID}.cabal" << EOL
+cabal-version: 3.0
+name:          ${CONTEST_ID}
+version:       0.1.0.0
+build-type:    Simple
 
-# 問題ディレクトリとMain.hsを作成
-for task in a b c d e f g; do
-  if grep -q "\"label\": \"$(echo $task | tr '[:lower:]' '[:upper:]')\"" contest.acc.json; then
-    mkdir -p "$task"
-    cp "$ROOT_DIR/cabal-template/Main.hs" "$task/Main.hs"
-  fi
+common deps
+  build-depends:
+    , base
+    , array
+    , attoparsec
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , mtl
+    , parsec
+    , text
+    , transformers
+    , unordered-containers
+    , vector
+
+  default-language: GHC2021
+  ghc-options:
+    -threaded -rtsopts -with-rtsopts=-N -Wall -O2 -optc-O3
+
+EOL
+
+# 動的にタスクごとの設定を追加
+for task in $TASKS; do
+  # ディレクトリとMain.hsを作成
+  mkdir -p "$task"
+  cp "$ROOT_DIR/cabal-template/Main.hs" "$task/Main.hs"
+  echo "Created directory and template for task $task"
+  
+  # cabalファイルに追記
+  cat >> "${CONTEST_ID}.cabal" << EOL
+executable $task
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: $task
+
+EOL
+done
+
+# hie.yamlを生成
+echo "cradle:" > hie.yaml
+echo "  cabal:" >> hie.yaml
+
+for task in $TASKS; do
+  cat >> hie.yaml << EOL
+    - path: "./$task/Main.hs"
+      component: "exe:$task"
+
+EOL
 done
 
 # acc config 設定
