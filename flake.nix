@@ -115,9 +115,9 @@
               oj-verify
               online-judge-tools
 
-              haskell.compiler.ghc947
-              haskell.packages.ghc947.cabal-fmt
-              haskell.packages.ghc947.doctest
+              haskell.compiler.ghc965
+              haskellPackages.cabal-fmt
+              haskellPackages.doctest
               haskellPackages.fourmolu
               haskellPackages.ghci-dap
               haskellPackages.ghcid
