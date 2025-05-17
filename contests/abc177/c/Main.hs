@@ -4,10 +4,10 @@
 module Main where
 
 import Data.ByteString.Char8 qualified as BS
-import Data.IntMap.Strict qualified as IM
-import Data.IntSet qualified as IS
 import Data.HashMap.Strict qualified as HM
 import Data.HashSet qualified as HS
+import Data.IntMap.Strict qualified as IM
+import Data.IntSet qualified as IS
 import Data.Map.Strict qualified as M
 import Data.Sequence qualified as Seq
 import Data.Set qualified as S
@@ -16,20 +16,40 @@ import Data.Vector.Unboxed qualified as VU
 import Control.Applicative (liftA3)
 import Control.Arrow ((>>>))
 import Control.Monad (replicateM)
-import Data.Array.Unboxed (UArray, (!), bounds, listArray, range)
+import Data.Array.Unboxed (UArray, bounds, listArray, range, (!))
 import Data.Char (digitToInt, intToDigit)
 import Data.Functor ((<&>))
 import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
+solve :: [Integer] -> Integer
+solve as = ((squareSum - sumSquare) `mod` modulo * inv2) `mod` modulo
+  where
+    modulo :: Integer
+    modulo = 1_000_000_007
+
+    inv2 :: Integer
+    inv2 = (modulo + 1) `div` 2
+
+    squareSum :: Integer
+    squareSum = (sum as * sum as) `mod` modulo
+
+    sumSquare :: Integer
+    sumSquare = sum ((\x -> (x * x) `mod` modulo) <$> as) `mod` modulo
+
 main :: IO ()
 main = do
-    undefined
+    _ <- ints
+    as <- integers
+    print $ solve as
 
 -- my lib
-ints :: IO [ Int ]
+ints :: IO [Int]
 ints = BS.getLine <&> (BS.words >>> map (BS.readInt >>> fromJust >>> fst))
+
+integers :: IO [Integer]
+integers = BS.getLine <&> (BS.words >>> map (BS.readInteger >>> fromJust >>> fst))
 
 intMat :: Int -> Int -> IO (UArray (Int, Int) Int)
 intMat h w = replicateM h ints <&> (concat >>> listArray @UArray ((1, 1), (h, w)))
@@ -48,14 +68,15 @@ fromBase :: Int -> String -> Int
 fromBase n = foldl' (\acc d -> acc * n + digitToInt d) 0
 
 toBase :: Int -> Int -> String
-toBase n x 
-  | x == 0    = "0"
-  | otherwise = reverse $ map intToDigit $ unfoldr getDigit x
+toBase n x
+    | x == 0 = "0"
+    | otherwise = reverse $ map intToDigit $ unfoldr getDigit x
   where
     getDigit 0 = Nothing
     getDigit y = Just (y `mod` n, y `div` n)
 
 unfoldr :: (b -> Maybe (a, b)) -> b -> [a]
 unfoldr f b = case f b of
-               Nothing     -> []
-               Just (a,b') -> a : unfoldr f b'
+    Nothing -> []
+    Just (a, b') -> a : unfoldr f b'
+
