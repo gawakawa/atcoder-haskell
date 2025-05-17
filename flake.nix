@@ -1,9 +1,8 @@
 {
-  # ref: https://github.com/toyboot4e/abc-hs/blob/main/flake.nix
   description = "AtCoder with Haskell";
 
   inputs = {
-    nixpkgs.url = "github:NixOS/nixpkgs/nixos-24.05";
+    nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-utils.url = "github:numtide/flake-utils";
   };
 
