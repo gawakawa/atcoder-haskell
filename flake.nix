@@ -114,7 +114,7 @@
               oj-verify
               online-judge-tools
 
-              haskell.compiler.ghc965
+              haskell.compiler.ghc984
               haskellPackages.cabal-fmt
               haskellPackages.doctest
               haskellPackages.fourmolu
