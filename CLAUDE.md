@@ -17,6 +17,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - 入力パース用の標準ユーティリティ関数を使用: ints, intMat など
 - 局所変数定義には `let` ではなく `where` を使用
 - 局所変数も含めて基本的に型注釈は書く
+- `return` ではなく`pure` を使う
+- `fmap` を使う場合は、`<$>` で書く
 
 ## プロジェクト構造
 - メインソリューションは `contests/[contest-id]/[problem-id]/Main.hs`
