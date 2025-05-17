@@ -31,6 +31,9 @@ main = do
 ints :: IO [ Int ]
 ints = BS.getLine <&> (BS.words >>> map (BS.readInt >>> fromJust >>> fst))
 
+integers :: IO [ Integer ]
+integers = BS.getLine <&> (BS.words >>> map (BS.readInteger >>> fromJust >>> fst))
+
 intMat :: Int -> Int -> IO (UArray (Int, Int) Int)
 intMat h w = replicateM h ints <&> (concat >>> listArray @UArray ((1, 1), (h, w)))
 
