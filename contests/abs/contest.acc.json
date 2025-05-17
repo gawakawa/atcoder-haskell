@@ -12,8 +12,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/practice_1",
       "directory": {
         "path": "practicea",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -23,8 +22,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/abc086_a",
       "directory": {
         "path": "abc086a",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -34,8 +32,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/abc081_a",
       "directory": {
         "path": "abc081a",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -45,8 +42,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/abc081_b",
       "directory": {
         "path": "abc081b",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -56,8 +52,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/abc087_b",
       "directory": {
         "path": "abc087b",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -67,8 +62,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/abc083_b",
       "directory": {
         "path": "abc083b",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -78,8 +72,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/abc088_b",
       "directory": {
         "path": "abc088b",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -89,8 +82,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/abc085_b",
       "directory": {
         "path": "abc085b",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -100,8 +92,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/abc085_c",
       "directory": {
         "path": "abc085c",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -111,8 +102,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/arc065_a",
       "directory": {
         "path": "abc049c",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     },
     {
@@ -122,8 +112,7 @@
       "url": "https://atcoder.jp/contests/abs/tasks/arc089_a",
       "directory": {
         "path": "abc086c",
-        "testdir": "test",
-        "submit": "Main.hs"
+        "testdir": "tests"
       }
     }
   ]

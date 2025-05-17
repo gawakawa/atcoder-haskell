@@ -3,21 +3,62 @@
 
 module Main where
 
-import Control.Monad ( replicateM )
-import Data.List ( foldl' )
+import Data.ByteString.Char8 qualified as BS
+import Data.IntMap.Strict qualified as IM
+import Data.IntSet qualified as IS
+import Data.HashMap.Strict qualified as HM
+import Data.HashSet qualified as HS
+import Data.Map.Strict qualified as M
+import Data.Sequence qualified as Seq
+import Data.Set qualified as S
+import Data.Vector.Unboxed qualified as VU
 
-solve :: (Int, Int, Int) -> [ (Int, Int, Int) ] -> Bool
-solve _    []          = True
-solve from (to : rest) = reachable from to && solve to rest
-
-reachable :: (Int, Int, Int) -> (Int, Int, Int) -> Bool
-reachable (t1, x1, y1) (t2, x2, y2) =
-    (&&) <$> (>= 0) <*> even $ (t2 - t1) - abs (x1 - x2) - abs (y1 - y2)
+import Control.Applicative (liftA3)
+import Control.Arrow ((>>>))
+import Control.Monad (replicateM)
+import Data.Array.Unboxed (UArray, (!), bounds, listArray, range)
+import Data.Char (digitToInt, intToDigit)
+import Data.Functor ((<&>))
+import Data.List (foldl')
+import Data.Maybe (fromJust)
+import Data.Tuple.Extra (both)
 
 main :: IO ()
 main = do
-    n <- readLn :: IO Int
-    txys <- replicateM n $ do
-        [ t, x, y ] <- map read . words <$> getLine
-        pure (t, x, y) :: IO (Int, Int, Int)
-    putStrLn $ if solve (0, 0, 0) txys then "Yes" else "No"
+    undefined
+
+-- my lib
+ints :: IO [ Int ]
+ints = BS.getLine <&> (BS.words >>> map (BS.readInt >>> fromJust >>> fst))
+
+integers :: IO [ Integer ]
+integers = BS.getLine <&> (BS.words >>> map (BS.readInteger >>> fromJust >>> fst))
+
+intMat :: Int -> Int -> IO (UArray (Int, Int) Int)
+intMat h w = replicateM h ints <&> (concat >>> listArray @UArray ((1, 1), (h, w)))
+
+showIntMat :: UArray (Int, Int) Int -> String
+showIntMat mat =
+    unlines
+        [ unwords
+            [ show $ mat ! (r, c)
+            | c <- range $ both snd $ bounds mat
+            ]
+        | r <- range $ both fst $ bounds mat
+        ]
+
+fromBase :: Int -> String -> Int
+fromBase n = foldl' (\acc d -> acc * n + digitToInt d) 0
+
+toBase :: Int -> Int -> String
+toBase n x 
+  | x == 0    = "0"
+  | otherwise = reverse $ map intToDigit $ unfoldr getDigit x
+  where
+    getDigit 0 = Nothing
+    getDigit y = Just (y `mod` n, y `div` n)
+
+unfoldr :: (b -> Maybe (a, b)) -> b -> [a]
+unfoldr f b = case f b of
+               Nothing     -> []
+               Just (a,b') -> a : unfoldr f b'
