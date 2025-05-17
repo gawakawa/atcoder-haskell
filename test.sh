@@ -11,4 +11,4 @@ CONTEST_ID=$(basename "$PWD")
 cd "$PROBLEM_ID" || exit 1
 
 echo "Testing problem $PROBLEM_ID..."
-oj test -c "cabal run $PROBLEM_ID" -d tests
+oj test -c "cabal run -v0 $PROBLEM_ID" -d tests
