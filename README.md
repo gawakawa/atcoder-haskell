@@ -6,13 +6,12 @@
 nix develop
 
 # Create a new contest
-new abc321
+./new.sh abc321
 
 # Implement and run tests
 ../../test.sh a
 
-# Submit
-acc s a
+# Submit by pasting your code
 ```
 
 ## Directory Structure
