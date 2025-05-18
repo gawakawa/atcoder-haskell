@@ -84,4 +84,9 @@ cd "$ROOT_DIR/contests/$CONTEST_ID"
 cabal update
 cabal build
 
+# Git add と commit
+cd "$ROOT_DIR"
+git add "contests/$CONTEST_ID"
+git commit -m "🎉 $CONTEST_ID"
+
 echo "Contest directory for $CONTEST_ID has been created successfully!"
