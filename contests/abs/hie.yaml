@@ -1,35 +1,35 @@
 cradle:
   cabal:
     - path: "./practicea/Main.hs"
-      component: "exe:practicea"
+      component: "abs:exe:practicea"
 
     - path: "./abc086a/Main.hs"
-      component: "exe:abc086a"
+      component: "abs:exe:abc086a"
 
     - path: "./abc081a/Main.hs"
-      component: "exe:abc081a"
+      component: "abs:exe:abc081a"
 
     - path: "./abc081b/Main.hs"
-      component: "exe:abc081b"
+      component: "abs:exe:abc081b"
 
     - path: "./abc087b/Main.hs"
-      component: "exe:abc087b"
+      component: "abs:exe:abc087b"
 
     - path: "./abc083b/Main.hs"
-      component: "exe:abc083b"
+      component: "abs:exe:abc083b"
 
     - path: "./abc088b/Main.hs"
-      component: "exe:abc088b"
+      component: "abs:exe:abc088b"
 
     - path: "./abc085b/Main.hs"
-      component: "exe:abc085b"
+      component: "abs:exe:abc085b"
 
     - path: "./abc085c/Main.hs"
-      component: "exe:abc085c"
+      component: "abs:exe:abc085c"
 
     - path: "./abc049c/Main.hs"
-      component: "exe:abc049c"
+      component: "abs:exe:abc049c"
 
     - path: "./abc086c/Main.hs"
-      component: "exe:abc086c"
+      component: "abs:exe:abc086c"
 

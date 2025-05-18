@@ -1,20 +1,20 @@
 cradle:
   cabal:
     - path: "./a/Main.hs"
-      component: "exe:a"
+      component: "abc177:exe:a"
 
     - path: "./b/Main.hs"
-      component: "exe:b"
+      component: "abc177:exe:b"
 
     - path: "./c/Main.hs"
-      component: "exe:c"
+      component: "abc177:exe:c"
 
     - path: "./d/Main.hs"
-      component: "exe:d"
+      component: "abc177:exe:d"
 
     - path: "./e/Main.hs"
-      component: "exe:e"
+      component: "abc177:exe:e"
 
     - path: "./f/Main.hs"
-      component: "exe:f"
+      component: "abc177:exe:f"
 

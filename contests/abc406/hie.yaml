@@ -1,23 +1,23 @@
 cradle:
   cabal:
     - path: "./a/Main.hs"
-      component: "exe:a"
+      component: "abc406:exe:a"
 
     - path: "./b/Main.hs"
-      component: "exe:b"
+      component: "abc406:exe:b"
 
     - path: "./c/Main.hs"
-      component: "exe:c"
+      component: "abc406:exe:c"
 
     - path: "./d/Main.hs"
-      component: "exe:d"
+      component: "abc406:exe:d"
 
     - path: "./e/Main.hs"
-      component: "exe:e"
+      component: "abc406:exe:e"
 
     - path: "./f/Main.hs"
-      component: "exe:f"
+      component: "abc406:exe:f"
 
     - path: "./g/Main.hs"
-      component: "exe:g"
+      component: "abc406:exe:g"
 

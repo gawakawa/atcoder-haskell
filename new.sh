@@ -70,7 +70,7 @@ echo "  cabal:" >> hie.yaml
 for task in $TASKS; do
   cat >> hie.yaml << EOL
     - path: "./$task/Main.hs"
-      component: "exe:$task"
+      component: "${CONTEST_ID}:exe:$task"
 
 EOL
 done
