@@ -47,6 +47,12 @@ showIntMat mat =
         | r <- range $ both fst $ bounds mat
         ]
 
+ceiling :: (Integral a) => a -> a -> a
+ceiling n m
+    | m > 0 = (n + m - 1) `div` m
+    | m < 0 = (n + m + 1) `div` m
+    | otherwise = undefined
+
 fromBase :: Int -> String -> Int
 fromBase n = foldl' (\acc d -> acc * n + digitToInt d) 0
 
