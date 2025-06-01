@@ -47,15 +47,25 @@ isTilde as =
         guard $ arr ! i > arr ! (i + 1) && arr ! (i + 1) < arr ! (i + 2)
         pure i
 
--- 尺取り法
-solve :: UArray Int Int -> Int
-solve = undefined
+runLengthEncode :: [Char] -> [(Char, Int)]
+runLengthEncode = foldl' f e
+  where
+    f :: [(Char, Int)] -> Char -> [(Char, Int)]
+    f acc cur = let (pred, n) = head acc in
+      pred == cur -> undefined
+      _ -> undefined
+
+    e :: [(Char, Int)]
+    e = [('<', 0)]
+
+solve :: [Int] -> Int
+solve ps = undefined
 
 main :: IO ()
 main = do
-    [n] <- ints
+    _ <- ints
     ps <- ints
-    print $ solve $ listArray (0, n - 1) ps
+    print $ solve ps
 
 -- my lib
 ints :: IO [Int]
