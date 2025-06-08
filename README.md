@@ -40,3 +40,14 @@ atcoder/
         ├── hie.yaml     # HLS configuration
         └── contest.acc.json # AtCoder CLI configuration
 ```
+
+## Commit Messages
+
+Commit messages in the contests/ directory indicate the solution status.
+
+| Emoji | Meaning          |
+|-------|------------------|
+| 🎉    | Not attempted    |
+| 🚧    | Work in progress |
+| ✨    | AC               |
+| 🌱    | Editorial AC     |
