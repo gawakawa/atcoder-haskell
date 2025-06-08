@@ -53,6 +53,19 @@ ceiling n m
     | m < 0 = (n + m + 1) `div` m
     | otherwise = undefined
 
+binarySearch
+    :: (Ord a, Integral a)
+    => a -- 述語を満たす境界値
+    -> a -- 述語を満たさない境界値
+    -> (a -> Bool) -- 述語
+    -> a -- 述語を満たす新たな境界値
+binarySearch ok ng satisfies
+    | abs (ok - ng) <= 1 = ok
+    | satisfies mid = binarySearch mid ng satisfies
+    | otherwise = binarySearch ok mid satisfies
+  where
+    mid = (ok + ng) `quot` 2
+
 fromBase :: Int -> String -> Int
 fromBase n = foldl' (\acc d -> acc * n + digitToInt d) 0
 
