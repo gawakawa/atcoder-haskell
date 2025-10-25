@@ -3,16 +3,6 @@
 
 module Main where
 
-import Data.ByteString.Char8 qualified as BS
-import Data.HashMap.Strict qualified as HM
-import Data.HashSet qualified as HS
-import Data.IntMap.Strict qualified as IM
-import Data.IntSet qualified as IS
-import Data.Map.Strict qualified as M
-import Data.Sequence qualified as Seq
-import Data.Set qualified as S
-import Data.Vector.Unboxed qualified as VU
-
 import Control.Applicative (liftA3)
 import Control.Arrow ((>>>))
 import Control.Monad (replicateM)
@@ -23,6 +13,16 @@ import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
+import Data.ByteString.Char8 qualified as BS
+import Data.HashMap.Strict qualified as HM
+import Data.HashSet qualified as HS
+import Data.IntMap.Strict qualified as IM
+import Data.IntSet qualified as IS
+import Data.Map.Strict qualified as M
+import Data.Sequence qualified as Seq
+import Data.Set qualified as S
+import Data.Vector.Unboxed qualified as VU
+
 solve :: [Int] -> [Int]
 solve = S.toAscList . S.fromList
 
@@ -30,7 +30,8 @@ main :: IO ()
 main = do
     _ <- ints
     as <- ints
-    let cs = solve as
+    let
+        cs = solve as
     print $ length cs
     putStrLn $ unwords $ show <$> cs
 

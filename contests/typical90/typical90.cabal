@@ -4,18 +4,16 @@ cabal-version: 1.12
 --
 -- see: https://github.com/sol/hpack
 
-name:           typical90
-version:        0.0.0
-build-type:     Simple
+name:          typical90
+version:       0.0.0
+build-type:    Simple
 
 executable 001-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      001
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   001
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -36,6 +34,7 @@ executable 001-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -48,16 +47,15 @@ executable 001-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 002-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      002
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   002
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -78,6 +76,7 @@ executable 002-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -90,16 +89,15 @@ executable 002-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 003-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      003
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   003
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -120,6 +118,7 @@ executable 003-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -132,16 +131,15 @@ executable 003-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 004-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      004
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   004
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -162,6 +160,7 @@ executable 004-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -174,16 +173,15 @@ executable 004-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 005-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      005
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   005
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -204,6 +202,7 @@ executable 005-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -216,16 +215,15 @@ executable 005-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 006-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      006
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   006
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -246,6 +244,7 @@ executable 006-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -258,16 +257,15 @@ executable 006-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 007-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      007
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   007
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -288,6 +286,7 @@ executable 007-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -300,16 +299,15 @@ executable 007-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 008-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      008
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   008
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -330,6 +328,7 @@ executable 008-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -342,16 +341,15 @@ executable 008-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 009-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      009
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   009
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -372,6 +370,7 @@ executable 009-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -384,16 +383,15 @@ executable 009-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 010-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      010
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   010
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -414,6 +412,7 @@ executable 010-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -426,16 +425,15 @@ executable 010-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 011-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      011
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   011
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -456,6 +454,7 @@ executable 011-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -468,16 +467,15 @@ executable 011-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 012-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      012
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   012
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -498,6 +496,7 @@ executable 012-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -510,16 +509,15 @@ executable 012-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 013-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      013
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   013
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -540,6 +538,7 @@ executable 013-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -552,16 +551,15 @@ executable 013-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 014-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      014
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   014
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -582,6 +580,7 @@ executable 014-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -594,16 +593,15 @@ executable 014-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 015-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      015
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   015
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -624,6 +622,7 @@ executable 015-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -636,16 +635,15 @@ executable 015-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 016-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      016
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   016
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -666,6 +664,7 @@ executable 016-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -678,16 +677,15 @@ executable 016-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 017-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      017
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   017
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -708,6 +706,7 @@ executable 017-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -720,16 +719,15 @@ executable 017-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 018-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      018
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   018
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -750,6 +748,7 @@ executable 018-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -762,16 +761,15 @@ executable 018-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 019-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      019
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   019
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -792,6 +790,7 @@ executable 019-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -804,16 +803,15 @@ executable 019-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 020-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      020
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   020
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -834,6 +832,7 @@ executable 020-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -846,16 +845,15 @@ executable 020-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 021-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      021
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   021
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -876,6 +874,7 @@ executable 021-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -888,16 +887,15 @@ executable 021-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 022-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      022
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   022
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -918,6 +916,7 @@ executable 022-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -930,16 +929,15 @@ executable 022-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 023-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      023
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   023
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -960,6 +958,7 @@ executable 023-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -972,16 +971,15 @@ executable 023-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 024-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      024
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   024
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1002,6 +1000,7 @@ executable 024-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1014,16 +1013,15 @@ executable 024-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 025-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      025
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   025
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1044,6 +1042,7 @@ executable 025-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1056,16 +1055,15 @@ executable 025-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 026-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      026
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   026
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1086,6 +1084,7 @@ executable 026-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1098,16 +1097,15 @@ executable 026-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 027-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      027
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   027
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1128,6 +1126,7 @@ executable 027-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1140,16 +1139,15 @@ executable 027-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 028-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      028
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   028
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1170,6 +1168,7 @@ executable 028-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1182,16 +1181,15 @@ executable 028-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 029-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      029
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   029
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1212,6 +1210,7 @@ executable 029-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1224,16 +1223,15 @@ executable 029-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 030-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      030
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   030
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1254,6 +1252,7 @@ executable 030-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1266,16 +1265,15 @@ executable 030-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 031-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      031
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   031
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1296,6 +1294,7 @@ executable 031-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1308,16 +1307,15 @@ executable 031-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 032-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      032
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   032
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1338,6 +1336,7 @@ executable 032-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1350,16 +1349,15 @@ executable 032-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 033-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      033
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   033
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1380,6 +1378,7 @@ executable 033-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1392,16 +1391,15 @@ executable 033-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 034-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      034
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   034
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1422,6 +1420,7 @@ executable 034-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1434,16 +1433,15 @@ executable 034-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 035-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      035
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   035
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1464,6 +1462,7 @@ executable 035-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1476,16 +1475,15 @@ executable 035-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 036-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      036
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   036
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1506,6 +1504,7 @@ executable 036-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1518,16 +1517,15 @@ executable 036-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 037-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      037
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   037
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1548,6 +1546,7 @@ executable 037-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1560,16 +1559,15 @@ executable 037-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 038-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      038
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   038
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1590,6 +1588,7 @@ executable 038-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1602,16 +1601,15 @@ executable 038-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 039-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      039
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   039
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1632,6 +1630,7 @@ executable 039-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1644,16 +1643,15 @@ executable 039-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 040-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      040
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   040
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1674,6 +1672,7 @@ executable 040-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1686,16 +1685,15 @@ executable 040-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 041-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      041
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   041
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1716,6 +1714,7 @@ executable 041-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1728,16 +1727,15 @@ executable 041-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 042-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      042
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   042
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1758,6 +1756,7 @@ executable 042-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1770,16 +1769,15 @@ executable 042-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 043-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      043
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   043
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1800,6 +1798,7 @@ executable 043-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1812,16 +1811,15 @@ executable 043-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 044-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      044
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   044
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1842,6 +1840,7 @@ executable 044-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1854,16 +1853,15 @@ executable 044-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 045-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      045
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   045
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1884,6 +1882,7 @@ executable 045-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1896,16 +1895,15 @@ executable 045-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 046-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      046
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   046
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1926,6 +1924,7 @@ executable 046-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1938,16 +1937,15 @@ executable 046-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 047-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      047
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   047
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -1968,6 +1966,7 @@ executable 047-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -1980,16 +1979,15 @@ executable 047-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 048-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      048
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   048
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2010,6 +2008,7 @@ executable 048-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2022,16 +2021,15 @@ executable 048-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 049-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      049
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   049
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2052,6 +2050,7 @@ executable 049-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2064,16 +2063,15 @@ executable 049-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 050-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      050
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   050
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2094,6 +2092,7 @@ executable 050-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2106,16 +2105,15 @@ executable 050-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 051-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      051
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   051
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2136,6 +2134,7 @@ executable 051-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2148,16 +2147,15 @@ executable 051-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 052-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      052
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   052
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2178,6 +2176,7 @@ executable 052-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2190,16 +2189,15 @@ executable 052-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 053-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      053
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   053
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2220,6 +2218,7 @@ executable 053-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2232,16 +2231,15 @@ executable 053-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 054-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      054
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   054
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2262,6 +2260,7 @@ executable 054-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2274,16 +2273,15 @@ executable 054-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 055-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      055
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   055
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2304,6 +2302,7 @@ executable 055-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2316,16 +2315,15 @@ executable 055-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 056-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      056
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   056
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2346,6 +2344,7 @@ executable 056-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2358,16 +2357,15 @@ executable 056-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 057-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      057
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   057
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2388,6 +2386,7 @@ executable 057-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2400,16 +2399,15 @@ executable 057-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 058-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      058
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   058
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2430,6 +2428,7 @@ executable 058-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2442,16 +2441,15 @@ executable 058-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 059-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      059
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   059
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2472,6 +2470,7 @@ executable 059-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2484,16 +2483,15 @@ executable 059-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 060-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      060
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   060
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2514,6 +2512,7 @@ executable 060-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2526,16 +2525,15 @@ executable 060-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 061-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      061
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   061
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2556,6 +2554,7 @@ executable 061-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2568,16 +2567,15 @@ executable 061-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 062-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      062
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   062
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2598,6 +2596,7 @@ executable 062-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2610,16 +2609,15 @@ executable 062-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 063-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      063
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   063
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2640,6 +2638,7 @@ executable 063-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2652,16 +2651,15 @@ executable 063-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 064-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      064
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   064
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2682,6 +2680,7 @@ executable 064-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2694,16 +2693,15 @@ executable 064-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 065-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      065
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   065
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2724,6 +2722,7 @@ executable 065-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2736,16 +2735,15 @@ executable 065-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 066-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      066
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   066
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2766,6 +2764,7 @@ executable 066-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2778,16 +2777,15 @@ executable 066-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 067-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      067
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   067
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2808,6 +2806,7 @@ executable 067-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2820,16 +2819,15 @@ executable 067-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 068-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      068
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   068
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2850,6 +2848,7 @@ executable 068-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2862,16 +2861,15 @@ executable 068-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 069-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      069
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   069
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2892,6 +2890,7 @@ executable 069-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2904,16 +2903,15 @@ executable 069-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 070-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      070
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   070
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2934,6 +2932,7 @@ executable 070-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2946,16 +2945,15 @@ executable 070-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 071-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      071
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   071
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -2976,6 +2974,7 @@ executable 071-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -2988,16 +2987,15 @@ executable 071-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 072-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      072
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   072
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3018,6 +3016,7 @@ executable 072-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3030,16 +3029,15 @@ executable 072-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 073-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      073
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   073
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3060,6 +3058,7 @@ executable 073-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3072,16 +3071,15 @@ executable 073-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 074-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      074
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   074
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3102,6 +3100,7 @@ executable 074-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3114,16 +3113,15 @@ executable 074-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 075-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      075
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   075
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3144,6 +3142,7 @@ executable 075-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3156,16 +3155,15 @@ executable 075-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 076-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      076
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   076
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3186,6 +3184,7 @@ executable 076-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3198,16 +3197,15 @@ executable 076-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 077-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      077
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   077
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3228,6 +3226,7 @@ executable 077-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3240,16 +3239,15 @@ executable 077-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 078-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      078
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   078
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3270,6 +3268,7 @@ executable 078-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3282,16 +3281,15 @@ executable 078-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 079-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      079
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   079
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3312,6 +3310,7 @@ executable 079-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3324,16 +3323,15 @@ executable 079-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 080-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      080
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   080
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3354,6 +3352,7 @@ executable 080-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3366,16 +3365,15 @@ executable 080-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 081-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      081
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   081
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3396,6 +3394,7 @@ executable 081-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3408,16 +3407,15 @@ executable 081-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 082-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      082
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   082
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3438,6 +3436,7 @@ executable 082-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3450,16 +3449,15 @@ executable 082-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 083-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      083
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   083
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3480,6 +3478,7 @@ executable 083-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3492,16 +3491,15 @@ executable 083-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 084-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      084
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   084
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3522,6 +3520,7 @@ executable 084-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3534,16 +3533,15 @@ executable 084-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 085-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      085
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   085
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3564,6 +3562,7 @@ executable 085-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3576,16 +3575,15 @@ executable 085-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 086-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      086
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   086
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3606,6 +3604,7 @@ executable 086-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3618,16 +3617,15 @@ executable 086-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 087-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      087
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   087
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3648,6 +3646,7 @@ executable 087-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3660,16 +3659,15 @@ executable 087-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 088-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      088
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   088
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3690,6 +3688,7 @@ executable 088-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3702,16 +3701,15 @@ executable 088-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 089-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      089
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   089
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3732,6 +3730,7 @@ executable 089-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3744,16 +3743,15 @@ executable 089-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021
 
 executable 090-exe
-  main-is: Main.hs
-  hs-source-dirs:
-      090
-  ghc-options: -threaded -rtsopts -with-rtsopts=-N -Wall
+  main-is:          Main.hs
+  hs-source-dirs:   090
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall
   build-depends:
-      QuickCheck
-    , array
+      array
     , attoparsec
     , base
     , bytestring
@@ -3774,6 +3772,7 @@ executable 090-exe
     , parsec
     , primitive
     , psqueues
+    , QuickCheck
     , random
     , reflection
     , template-haskell
@@ -3786,4 +3785,5 @@ executable 090-exe
     , vector
     , vector-algorithms
     , vector-th-unbox
+
   default-language: GHC2021

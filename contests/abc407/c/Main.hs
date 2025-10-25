@@ -3,18 +3,6 @@
 
 module Main where
 
-import Data.ByteString qualified as BS
-import Data.ByteString.Char8 qualified as BSC
-import Data.HashMap.Strict qualified as HM
-import Data.HashSet qualified as HS
-import Data.IntMap.Strict qualified as IM
-import Data.IntSet qualified as IS
-import Data.List.NonEmpty qualified as NE
-import Data.Map.Strict qualified as M
-import Data.Sequence qualified as Seq
-import Data.Set qualified as S
-import Data.Vector.Unboxed qualified as VU
-
 import Control.Applicative (liftA3)
 import Control.Arrow ((>>>))
 import Control.Monad (replicateM)
@@ -28,6 +16,18 @@ import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 import Data.Word (Word32, Word8)
 
+import Data.ByteString qualified as BS
+import Data.ByteString.Char8 qualified as BSC
+import Data.HashMap.Strict qualified as HM
+import Data.HashSet qualified as HS
+import Data.IntMap.Strict qualified as IM
+import Data.IntSet qualified as IS
+import Data.List.NonEmpty qualified as NE
+import Data.Map.Strict qualified as M
+import Data.Sequence qualified as Seq
+import Data.Set qualified as S
+import Data.Vector.Unboxed qualified as VU
+
 solve :: BS.ByteString -> Int
 solve s = buttonAClickCount + buttonBClickCount
   where
@@ -36,8 +36,8 @@ solve s = buttonAClickCount + buttonBClickCount
 
     buttonBClickCount :: Int
     buttonBClickCount =
-        sum $
-            fromIntegral
+        sum
+            $ fromIntegral
                 <$> BS.zipWith (\c c' -> (10 + c - c') `mod` 10) s (BS.snoc (BS.tail s) zero)
 
     zero :: Word8

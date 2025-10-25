@@ -3,16 +3,6 @@
 
 module Main where
 
-import Data.ByteString.Char8 qualified as BS
-import Data.HashMap.Strict qualified as HM
-import Data.HashSet qualified as HS
-import Data.IntMap.Strict qualified as IM
-import Data.IntSet qualified as IS
-import Data.Map.Strict qualified as M
-import Data.Sequence qualified as Seq
-import Data.Set qualified as S
-import Data.Vector.Unboxed qualified as VU
-
 import Control.Applicative (liftA3)
 import Control.Arrow ((>>>))
 import Control.Monad (guard, replicateM)
@@ -24,6 +14,16 @@ import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Text.Internal.Fusion.Common (isSingleton)
 import Data.Tuple.Extra (both)
+
+import Data.ByteString.Char8 qualified as BS
+import Data.HashMap.Strict qualified as HM
+import Data.HashSet qualified as HS
+import Data.IntMap.Strict qualified as IM
+import Data.IntSet qualified as IS
+import Data.Map.Strict qualified as M
+import Data.Sequence qualified as Seq
+import Data.Set qualified as S
+import Data.Vector.Unboxed qualified as VU
 
 isTilde :: UArray Int Int -> Bool
 isTilde as =
@@ -51,9 +51,13 @@ runLengthEncode :: [Char] -> [(Char, Int)]
 runLengthEncode = foldl' f e
   where
     f :: [(Char, Int)] -> Char -> [(Char, Int)]
-    f acc cur = let (pred, n) = head acc in
-      pred == cur -> undefined
-      _ -> undefined
+    f acc cur =
+        let
+            (prevChar, n) = head acc
+        in
+            if prevChar == cur
+                then undefined
+                else undefined
 
     e :: [(Char, Int)]
     e = [('<', 0)]

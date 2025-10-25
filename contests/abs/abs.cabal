@@ -5,9 +5,9 @@ build-type:    Simple
 
 common deps
   build-depends:
-    , base
     , array
     , attoparsec
+    , base
     , bytestring
     , containers
     , deepseq
@@ -20,8 +20,7 @@ common deps
     , vector
 
   default-language: GHC2021
-  ghc-options:
-    -threaded -rtsopts -with-rtsopts=-N -Wall -O2 -optc-O3
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall -O2 -optc-O3
 
 executable practicea
   import:         deps
@@ -77,4 +76,3 @@ executable abc086c
   import:         deps
   main-is:        Main.hs
   hs-source-dirs: abc086c
-

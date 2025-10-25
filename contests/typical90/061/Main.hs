@@ -6,11 +6,11 @@ module Main where
 import Control.Monad (replicateM)
 import Data.Maybe (fromJust)
 
-import qualified Data.ByteString.Char8 as BS
-import qualified Data.Sequence as Seq
+import Data.ByteString.Char8 qualified as BS
+import Data.Sequence qualified as Seq
 
-solve :: Seq.Seq Int -> [ (Int, Int) ] -> [ Int ]
-solve _    []             = []
+solve :: Seq.Seq Int -> [(Int, Int)] -> [Int]
+solve _ [] = []
 solve deck ((t, x) : txs) = case t of
     1 -> solve (x Seq.<| deck) txs
     2 -> solve (deck Seq.|> x) txs
@@ -19,8 +19,8 @@ solve deck ((t, x) : txs) = case t of
 
 main :: IO ()
 main = do
-    q   <- readLn @Int
+    q <- readLn @Int
     txs <- replicateM q $ do
-        [ t, x ] <- map (fst . fromJust . BS.readInt) . BS.words <$> BS.getLine
+        [t, x] <- map (fst . fromJust . BS.readInt) . BS.words <$> BS.getLine
         pure (t, x)
     putStr $ unlines $ show <$> solve Seq.empty txs

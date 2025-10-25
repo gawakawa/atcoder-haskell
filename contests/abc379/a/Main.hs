@@ -3,26 +3,26 @@
 
 module Main where
 
-import Data.ByteString.Char8 qualified as BS
-import Data.IntMap.Strict qualified as IM
-import Data.IntSet qualified as IS
-import Data.HashMap.Strict qualified as HM
-import Data.HashSet qualified as HS
-import Data.Map.Strict qualified as M
-import Data.Sequence qualified as Seq
-import Data.Set qualified as S
-import Data.Vector.Unboxed qualified as VU
-
 import Control.Applicative (liftA3)
 import Control.Arrow ((>>>))
 import Control.Monad (replicateM)
-import Data.Array.Unboxed (UArray, (!), bounds, listArray, range)
+import Data.Array.Unboxed (UArray, bounds, listArray, range, (!))
 import Data.Bool.HT (if')
 import Data.Char (digitToInt, intToDigit)
 import Data.Functor ((<&>))
 import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
+
+import Data.ByteString.Char8 qualified as BS
+import Data.HashMap.Strict qualified as HM
+import Data.HashSet qualified as HS
+import Data.IntMap.Strict qualified as IM
+import Data.IntSet qualified as IS
+import Data.Map.Strict qualified as M
+import Data.Sequence qualified as Seq
+import Data.Set qualified as S
+import Data.Vector.Unboxed qualified as VU
 
 shiftLeft :: Int -> Int
 shiftLeft n = n `mod` 100 * 10 + n `div` 100
@@ -32,11 +32,11 @@ shiftRight n = n `mod` 10 * 100 + n `div` 10
 
 main :: IO ()
 main = do
-    [ n ] <- ints
-    putStrLn $ unwords $ show <$> [ shiftLeft n, shiftRight n ]
+    [n] <- ints
+    putStrLn $ unwords $ show <$> [shiftLeft n, shiftRight n]
 
 -- my lib
-ints :: IO [ Int ]
+ints :: IO [Int]
 ints = BS.getLine <&> (BS.words >>> map (BS.readInt >>> fromJust >>> fst))
 
 intMat :: Int -> Int -> IO (UArray (Int, Int) Int)
@@ -56,7 +56,11 @@ fromBase :: Int -> String -> Int
 fromBase n = foldl' (\acc d -> acc * n + digitToInt d) 0
 
 toBase :: Int -> Int -> String
-toBase n = liftA3 if' (== 0) 
-    (const "0") 
-    $ iterate (`div` n) >>> takeWhile (> 0) 
-      >>> foldl' (flip $ (`mod` n) >>> intToDigit >>> (:)) ""
+toBase n =
+    liftA3
+        if'
+        (== 0)
+        (const "0")
+        $ iterate (`div` n)
+            >>> takeWhile (> 0)
+            >>> foldl' (flip $ (`mod` n) >>> intToDigit >>> (:)) ""

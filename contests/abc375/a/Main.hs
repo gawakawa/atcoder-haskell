@@ -2,9 +2,9 @@
 
 module Main where
 
-import qualified Data.ByteString.Char8 as BS
+import Data.ByteString.Char8 qualified as BS
 
-solve :: [ Char ] -> Int
+solve :: [Char] -> Int
 solve (first : second : third : rest)
     | first == '#' && second == '.' && third == '#' = 1 + solve (third : rest)
     | otherwise = solve $ second : third : rest

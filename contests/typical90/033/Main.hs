@@ -8,7 +8,7 @@ import Data.Bool.HT (if')
 import Data.Function (on)
 import Data.Maybe (fromJust)
 
-import qualified Data.ByteString.Char8 as BS
+import Data.ByteString.Char8 qualified as BS
 
 solve :: Int -> Int -> Int
 solve h w =
@@ -18,12 +18,12 @@ solve h w =
 
 solve' :: Int -> Int -> Int
 solve' = ap . ap (ap . (if' .) . cnd) thn <*> els
-    where
-        cnd = (||) `on` (== 1)
-        thn = (*)
-        els = (*) `on` \n -> (n + 1) `div` 2
+  where
+    cnd = (||) `on` (== 1)
+    thn = (*)
+    els = (*) `on` \n -> (n + 1) `div` 2
 
 main :: IO ()
 main = do
-    [ h, w ] <- map (fst . fromJust . BS.readInt) . BS.words <$> BS.getLine
+    [h, w] <- map (fst . fromJust . BS.readInt) . BS.words <$> BS.getLine
     print $ solve' h w
