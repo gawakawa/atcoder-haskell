@@ -13,42 +13,24 @@
       let
         pkgs = import nixpkgs { inherit system; };
 
-        atcoder-cli = pkgs.stdenv.mkDerivation {
+        atcoder-cli = pkgs.buildNpmPackage {
           pname = "atcoder-cli";
           version = "2.2.0";
 
-          dontUnpack = true;
+          src = pkgs.fetchFromGitHub {
+            owner = "Tatamo";
+            repo = "atcoder-cli";
+            rev = "v2.2.0";
+            hash = "sha256-7pbCTgWt+khKVyMV03HanvuOX2uAC0PL9OLmqly7IWE=";
+          };
 
-          buildInputs = [
-            pkgs.cacert
-            pkgs.nodejs_22
-          ];
+          npmDepsHash = "sha256-ufG7Fq5D2SOzUp8KYRYUB5tYJYoADuhK+2zDfG0a3ks=";
 
-          buildPhase = ''
-            export HOME=$TMPDIR
-            export NODE_OPTIONS="--openssl-legacy-provider"
-            export npm_config_cafile=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt
-            export SSL_CERT_FILE=${pkgs.cacert}/etc/ssl/certs/ca-bundle.crt
+          nativeBuildInputs = [ pkgs.nodejs_20 ];
 
-            mkdir -p npm_packages
+          NODE_OPTIONS = "--openssl-legacy-provider";
 
-            ${pkgs.nodejs_22}/bin/npm install atcoder-cli@2.2.0 --prefix=$PWD/npm_packages --legacy-peer-deps --no-optional --unsafe-perm
-          '';
-
-          installPhase = ''
-            mkdir -p $out/bin
-            mkdir -p $out/lib
-
-            cp -r npm_packages/node_modules $out/lib/
-
-            cat > $out/bin/acc << EOF
-            #!/bin/sh
-            export NODE_OPTIONS="--openssl-legacy-provider"
-            export NODE_PATH=$out/lib
-            exec ${pkgs.nodejs_22}/bin/node $out/lib/node_modules/atcoder-cli/bin/index.js "\$@"
-            EOF
-            chmod +x $out/bin/acc
-          '';
+          dontNpmBuild = true;
         };
 
         oj-verify =
@@ -118,11 +100,8 @@
               haskellPackages.cabal-fmt
               haskellPackages.doctest
               haskellPackages.fourmolu
-              haskellPackages.ghci-dap
               haskellPackages.ghcid
               haskellPackages.ghcide
-              haskellPackages.haskell-dap
-              haskellPackages.haskell-debug-adapter
               haskellPackages.haskell-language-server
               haskellPackages.hoogle
               haskellPackages.implicit-hie
