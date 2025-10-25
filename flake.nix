@@ -4,6 +4,7 @@
   inputs = {
     nixpkgs.url = "github:NixOS/nixpkgs/nixos-unstable";
     flake-parts.url = "github:hercules-ci/flake-parts";
+    treefmt-nix.url = "github:numtide/treefmt-nix";
   };
 
   outputs =
@@ -19,6 +20,8 @@
         "x86_64-darwin"
         "aarch64-darwin"
       ];
+
+      imports = [ inputs.treefmt-nix.flakeModule ];
 
       perSystem =
         { system, pkgs, ... }:
@@ -87,7 +90,6 @@
                 haskell.compiler.ghc984
                 haskellPackages.cabal-fmt
                 haskellPackages.doctest
-                haskellPackages.fourmolu
                 haskellPackages.ghcid
                 haskellPackages.ghcide
                 haskellPackages.haskell-language-server
@@ -109,6 +111,14 @@
                 }
               '';
             };
+
+          treefmt = {
+            programs = {
+              nixfmt.enable = true;
+              fourmolu.enable = true;
+              cabal-fmt.enable = true;
+            };
+          };
         };
     };
 }
