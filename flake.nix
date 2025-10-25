@@ -88,7 +88,6 @@
                 online-judge-tools
 
                 haskell.compiler.ghc984
-                haskellPackages.cabal-fmt
                 haskellPackages.doctest
                 haskellPackages.ghcid
                 haskellPackages.ghcide
