@@ -2,29 +2,62 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
-## コマンド
-- 問題をテスト: `./test.sh [problem-id]` (コンテストディレクトリから実行)
-- 最初のテストケースで実行: `./run.sh [contest-id] [problem-id]`
-- 解答を提出: `./submit.sh [problem-id]`
-- 新しいコンテストを作成: `./new.sh [contest-id]`
+## Commands
+- Create new contest: `./new.sh [contest-id]` (from repository root)
+- Test problem: `./test.sh [problem-id]` or `t` (from contest directory)
+- Run with first test case: `./run.sh [contest-id] [problem-id]` (from repository root)
+- Submit solution: `./submit.sh [problem-id]` or `s` (from contest directory)
+- Format code: `nix fmt` (runs fourmolu, nixfmt, cabal-fmt via treefmt-nix)
 
-## コードスタイル
-- Fourmoluでフォーマット (80文字制限)
-- 標準エイリアスを使用した修飾インポート: BS (ByteString), IM (IntMap) など
-- StrictData言語拡張を有効化
-- パフォーマンスが重要な行列操作にはUArrayを優先
-- 網羅的なパターンマッチングとエッジケースの明示的な処理
-- 入力パース用の標準ユーティリティ関数を使用: ints, intMat など
-- 局所変数定義には `let` ではなく `where` を使用
-- 局所変数も含めて基本的に型注釈は書く
-- `return` ではなく`pure` を使う
-- `fmap` を使う場合は、`<$>` で書く
+## Development Environment
+- Enter dev shell: `nix develop`
+- Shell aliases:
+  - `t`: `./test.sh $(basename $PWD)` (test current problem)
+  - `s`: `acc s` (submit current problem)
+  - `ts`: `t && s` (test then submit)
+  - `new [contest-id]`: create new contest
 
-## プロジェクト構造
-- メインソリューションは `contests/[contest-id]/[problem-id]/Main.hs`
-- テストケースは `tests/` または `test/` ディレクトリにsample-N.in/outファイルとして保存
-- ビルドにはCabalを使用し、標準フラグ: -threaded -rtsopts -O2
-- 一貫した開発環境のためのNix flake
+## Project Structure
+- Main solutions: `contests/[contest-id]/[problem-id]/Main.hs`
+- Test cases: `contests/[contest-id]/[problem-id]/tests/sample-N.in`/`.out`
+- Template: `cabal-template/Main.hs` (copied when creating new contests)
+- Cabal files: `[contest-id].cabal` generated per contest directory
+- hie.yaml: Auto-generated per contest directory for HLS
 
-## 参考 URL
-- https://hoogle.haskell.org/ (Haskell の関数を検索する API で、関数名や型で検索をかけることができる )
+## Code Style
+- Format with Fourmolu (80 character limit)
+- Use qualified imports with standard aliases: `BS` (ByteString), `IM` (IntMap), `VU` (Vector.Unboxed), etc.
+- Enable `{-# LANGUAGE StrictData #-}`
+- Prefer `UArray` for performance-critical matrix operations
+- Use exhaustive pattern matching with explicit edge case handling
+- Use standard utility functions for input parsing: `ints`, `integers`, `intMat`, etc.
+  - `ints :: IO [Int]`: Read a line of integers
+  - `integers :: IO [Integer]`: Read a line of large integers
+  - `intMat :: Int -> Int -> IO (UArray (Int, Int) Int)`: Read h×w matrix (1-indexed)
+- Use `where` instead of `let` for local definitions
+- Add type annotations for all bindings including local variables
+- Use `pure` instead of `return`
+- Use `<$>` instead of `fmap`
+- Use `>>>` as pipeline operator (from Control.Arrow)
+
+## Utility Functions
+The template includes these helper functions:
+- `binarySearch :: (Ord a, Integral a) => a -> a -> (a -> Bool) -> a`
+- `ceiling :: (Integral a) => a -> a -> a` (ceiling division)
+- `fromBase :: Int -> String -> Int`, `toBase :: Int -> Int -> String` (base conversion)
+- `showIntMat :: UArray (Int, Int) Int -> String` (matrix to string)
+
+## Build Configuration
+- Language: GHC2021
+- GHC flags: `-threaded -rtsopts -with-rtsopts=-N -Wall -O2 -optc-O3`
+- Dependencies: base, array, attoparsec, bytestring, containers, deepseq, extra, mtl, parsec, text, transformers, unordered-containers, vector
+
+## Commit Message Convention
+Use these emojis for commits in contests/ directory:
+- 🎉: Not attempted
+- 🚧: Work in progress
+- ✨: AC (Accepted)
+- 🌱: Editorial AC
+
+## References
+- https://hoogle.haskell.org/ (Haskell function search API - searchable by function name or type)
