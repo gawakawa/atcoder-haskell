@@ -31,7 +31,8 @@
           (final: prev: {
             atcoderProject = final.haskell-nix.cabalProject' {
               src = ./.;
-              compiler-nix-name = "ghc98";
+              # AtCoder uses GHC 9.8.4
+              compiler-nix-name = "ghc984";
               shell = {
                 tools = {
                   cabal = "latest";
