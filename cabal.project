@@ -1,5 +1,8 @@
 packages: ./contests/*/*.cabal
 
+-- Hackage snapshot for reproducible builds
+index-state: 2025-01-30T00:00:00Z
+
 -- 競技プログラミング用の最適化オプション
 package *
   optimization: 2
