@@ -96,55 +96,34 @@
           dontNpmBuild = true;
         };
 
+        # Helper function to create wrapped scripts
+        mkWrappedScript =
+          name: scriptPath: deps:
+          let
+            script = (pkgs.writeScriptBin "${name}.sh" (builtins.readFile scriptPath)).overrideAttrs (old: {
+              buildCommand = "${old.buildCommand}\n patchShebangs $out";
+            });
+          in
+          pkgs.symlinkJoin {
+            inherit name;
+            paths = [ script ] ++ deps;
+            buildInputs = [ pkgs.makeWrapper ];
+            postBuild = "wrapProgram $out/bin/${name}.sh --prefix PATH : $out/bin";
+          };
+
         # Script wrappers
-        new-script =
-          (pkgs.writeScriptBin "new.sh" (builtins.readFile ./scripts/new.sh)).overrideAttrs
-            (old: {
-              buildCommand = "${old.buildCommand}\n patchShebangs $out";
-            });
-        new-wrapped = pkgs.symlinkJoin {
-          name = "new";
-          paths = [
-            new-script
-          ]
-          ++ [
-            atcoder-cli
-            pkgs.online-judge-tools
-            pkgs.jq
-            pkgs.git
-          ];
-          buildInputs = [ pkgs.makeWrapper ];
-          postBuild = "wrapProgram $out/bin/new.sh --prefix PATH : $out/bin";
-        };
+        new-wrapped = mkWrappedScript "new" ./scripts/new.sh [
+          atcoder-cli
+          pkgs.online-judge-tools
+          pkgs.jq
+          pkgs.git
+        ];
 
-        test-script =
-          (pkgs.writeScriptBin "test.sh" (builtins.readFile ./scripts/test.sh)).overrideAttrs
-            (old: {
-              buildCommand = "${old.buildCommand}\n patchShebangs $out";
-            });
-        test-wrapped = pkgs.symlinkJoin {
-          name = "test";
-          paths = [
-            test-script
-          ]
-          ++ [
-            pkgs.online-judge-tools
-          ];
-          buildInputs = [ pkgs.makeWrapper ];
-          postBuild = "wrapProgram $out/bin/test.sh --prefix PATH : $out/bin";
-        };
+        test-wrapped = mkWrappedScript "test" ./scripts/test.sh [
+          pkgs.online-judge-tools
+        ];
 
-        run-script =
-          (pkgs.writeScriptBin "run.sh" (builtins.readFile ./scripts/run.sh)).overrideAttrs
-            (old: {
-              buildCommand = "${old.buildCommand}\n patchShebangs $out";
-            });
-        run-wrapped = pkgs.symlinkJoin {
-          name = "run";
-          paths = [ run-script ];
-          buildInputs = [ pkgs.makeWrapper ];
-          postBuild = "wrapProgram $out/bin/run.sh --prefix PATH : $out/bin";
-        };
+        run-wrapped = mkWrappedScript "run" ./scripts/run.sh [ ];
       in
       flake
       // {
