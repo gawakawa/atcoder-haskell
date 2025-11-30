@@ -31,8 +31,5 @@ jobs:
       - name: Check formatting
         run: nix fmt -- --fail-on-change
 
-      - name: Build project
-        run: nix build --print-build-logs
-
       - name: Flake check
-        run: nix flake check --print-build-logs
+        run: nix flake check --print-build-logs --accept-flake-config
