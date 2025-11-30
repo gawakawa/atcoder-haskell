@@ -9,8 +9,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Format code: `nix fmt` (runs fourmolu, nixfmt, cabal-fmt via treefmt-nix)
 
 ## Development Environment
-- Enter dev shell: `nix develop`
-- Shell aliases:
+- Use direnv to automatically load the development environment
+- Shell aliases (available when direnv is loaded):
   - `t`: `./scripts/test.sh $(basename $PWD)` (test current problem)
   - `new [contest-id]`: create new contest
 

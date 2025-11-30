@@ -2,17 +2,17 @@
 ## Usage
 
 ```bash
-# Enter the nix shell
-nix develop
+# The development environment is automatically loaded by direnv
+# If not loaded, run: direnv allow
 
 # Create a new contest
-./new.sh abc321
+new abc321  # or ./scripts/new.sh abc321
 
 # Navigate to problem directory
 cd contests/abc321/a
 
 # Run tests
-t  # alias for ../../test.sh $(basename $PWD)
+t  # alias for ../../scripts/test.sh $(basename $PWD)
 ```
 
 ## Directory Structure
