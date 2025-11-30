@@ -56,45 +56,8 @@
           };
         };
 
-        aclogin =
-          with pkgs.python3Packages;
-          pkgs.python3Packages.buildPythonApplication {
-            name = "aclogin";
-            version = "0.0.1";
-            format = "setuptools";
-            src = pkgs.fetchFromGitHub {
-              owner = "key-moon";
-              repo = "aclogin";
-              rev = "e461311c0326578b16d1488be84261f4b24f6134";
-              fetchSubmodules = false;
-              sha256 = "sha256-kyU7KpFenFb7obwSrDp6dPfuE+36r0BGYerrJj3+EyA=";
-            };
-            dependencies = [
-              appdirs
-              requests
-            ];
-            propagatedBuildInputs = [ setuptools ];
-          };
-
-        atcoder-cli = pkgs.buildNpmPackage {
-          pname = "atcoder-cli";
-          version = "2.2.0";
-
-          src = pkgs.fetchFromGitHub {
-            owner = "Tatamo";
-            repo = "atcoder-cli";
-            rev = "v2.2.0";
-            hash = "sha256-7pbCTgWt+khKVyMV03HanvuOX2uAC0PL9OLmqly7IWE=";
-          };
-
-          npmDepsHash = "sha256-ufG7Fq5D2SOzUp8KYRYUB5tYJYoADuhK+2zDfG0a3ks=";
-
-          nativeBuildInputs = [ pkgs.nodejs_20 ];
-
-          NODE_OPTIONS = "--openssl-legacy-provider";
-
-          dontNpmBuild = true;
-        };
+        aclogin = import ./nix/aclogin.nix { inherit pkgs; };
+        atcoder-cli = import ./nix/atcoder-cli.nix { inherit pkgs; };
 
         # Helper function to create wrapped scripts
         mkWrappedScript =

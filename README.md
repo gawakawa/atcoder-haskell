@@ -38,6 +38,9 @@ atcoder-haskell/
 ├── flake.nix            # Nix flake with haskell.nix
 ├── flake.lock           # Nix lock file
 ├── cabal.project        # Cabal project configuration
+├── nix/                 # External package definitions
+│   ├── aclogin.nix     # aclogin package
+│   └── atcoder-cli.nix # atcoder-cli package
 ├── cabal-template/      # Template files
 │   ├── Main.hs         # Solution template
 │   ├── hie.yaml        # HLS configuration
