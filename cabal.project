@@ -1,4 +1,6 @@
-packages: ./contests/*/*.cabal
+packages:
+  ./contests/*/*.cabal
+  ./acc-config/haskell/*.cabal
 
 -- AtCoder GHC 9.8.4 environment (2025/10)
 -- Based on https://img.atcoder.jp/file/language-update/2025-10/language-list.html
