@@ -2,17 +2,27 @@
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
+## Setup (First Time)
+1. Login to AtCoder:
+   ```bash
+   # Setup browser cookie for CLI tools (see: https://github.com/key-moon/aclogin)
+   aclogin
+
+   # Login to atcoder-cli
+   acc login
+   ```
+
 ## Commands
-- Create new contest: `./scripts/new.sh [contest-id]` (from repository root)
-- Test problem: `./scripts/test.sh [problem-id]` or `t` (from contest directory)
-- Run with first test case: `./scripts/run.sh [contest-id] [problem-id]` (from repository root)
+- Create new contest: `new.sh [contest-id]` (from repository root)
+- Test problem: `test.sh [problem-id]` or `t` (from contest directory)
+- Run with first test case: `run.sh [contest-id] [problem-id]` (from repository root)
 - Format code: `nix fmt` (runs fourmolu, nixfmt, cabal-fmt via treefmt-nix)
 
 ## Development Environment
 - Use direnv to automatically load the development environment
-- Shell aliases (available when direnv is loaded):
-  - `t`: `./scripts/test.sh $(basename $PWD)` (test current problem)
-  - `new [contest-id]`: create new contest
+- Scripts (`new.sh`, `test.sh`, `run.sh`) are wrapped by Nix with proper dependencies
+- Shell alias available in contest directory:
+  - `t`: test current problem
 
 ## Project Structure
 - Main solutions: `contests/[contest-id]/[problem-id]/Main.hs`

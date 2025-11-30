@@ -1,18 +1,34 @@
 # AtCoder with Haskell
+
+AtCoder competitive programming environment using Haskell with GHC 9.8.4, matching AtCoder's exact library versions.
+
+## Setup
+
+1. Install [Nix](https://nixos.org/download.html) with flakes enabled and [direnv](https://direnv.net/)
+2. Clone and setup:
+   ```bash
+   cd atcoder-haskell
+   direnv allow
+   ```
+3. Login to AtCoder (first time only):
+   ```bash
+   # Setup browser cookie for CLI tools
+   # See: https://github.com/key-moon/aclogin
+   aclogin
+
+   # Login to atcoder-cli
+   acc login
+   ```
+
 ## Usage
 
 ```bash
-# The development environment is automatically loaded by direnv
-# If not loaded, run: direnv allow
+# Create a new contest (from repository root)
+new.sh abc321
 
-# Create a new contest
-new abc321  # or ./scripts/new.sh abc321
-
-# Navigate to problem directory
+# Navigate to problem directory and test
 cd contests/abc321/a
-
-# Run tests
-t  # alias for ../../scripts/test.sh $(basename $PWD)
+t  # Run tests for current problem
 ```
 
 ## Directory Structure
