@@ -13,9 +13,6 @@ cd contests/abc321/a
 
 # Run tests
 t  # alias for ../../test.sh $(basename $PWD)
-
-# Submit solution
-s  # alias for acc s
 ```
 
 ## Directory Structure
@@ -29,10 +26,10 @@ atcoder-haskell/
 │   ├── Main.hs         # Solution template
 │   ├── hie.yaml        # HLS configuration
 │   └── task.cabal      # Cabal configuration template
-├── new.sh               # Contest creation script
-├── test.sh              # Test execution script
-├── run.sh               # Execution script
-├── submit.sh            # Submission script
+├── scripts/
+│   ├── new.sh          # Contest creation script
+│   ├── test.sh         # Test execution script
+│   └── run.sh          # Execution script
 └── contests/            # Contest directory
     └── abc321/          # Example: ABC321 contest
         ├── a/           # Problem A directory

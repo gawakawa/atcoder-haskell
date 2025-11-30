@@ -55,25 +55,6 @@
             nixfmt.enable = true;
           };
         };
-        atcoder-cli = pkgs.buildNpmPackage {
-          pname = "atcoder-cli";
-          version = "2.2.0";
-
-          src = pkgs.fetchFromGitHub {
-            owner = "Tatamo";
-            repo = "atcoder-cli";
-            rev = "v2.2.0";
-            hash = "sha256-7pbCTgWt+khKVyMV03HanvuOX2uAC0PL9OLmqly7IWE=";
-          };
-
-          npmDepsHash = "sha256-ufG7Fq5D2SOzUp8KYRYUB5tYJYoADuhK+2zDfG0a3ks=";
-
-          nativeBuildInputs = [ pkgs.nodejs_20 ];
-
-          NODE_OPTIONS = "--openssl-legacy-provider";
-
-          dontNpmBuild = true;
-        };
       in
       flake
       // {
@@ -85,17 +66,13 @@
           default = pkgs.mkShell {
             inputsFrom = [ flake.devShells.default ];
             packages = [
-              atcoder-cli
               pkgs.online-judge-tools
               pkgs.online-judge-verify-helper
             ];
             shellHook = ''
-              acc config oj-path $(which oj)
               export ROOT="$PWD"
 
               alias t='$ROOT/scripts/test.sh $(basename $PWD)'
-              alias s='acc s'
-              alias ts='t && s'
 
               new() {
                   $ROOT/scripts/new.sh $1
