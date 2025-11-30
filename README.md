@@ -38,33 +38,35 @@ t  # Run tests for current problem
 
 ```
 atcoder-haskell/
-├── flake.nix            # Nix flake with haskell.nix
-├── flake.lock           # Nix lock file
-├── cabal.project        # Cabal project configuration
-├── nix/                 # External package definitions
-│   ├── aclogin.nix     # aclogin package
-│   └── atcoder-cli.nix # atcoder-cli package
-├── acc-config/          # atcoder-cli configuration
-│   └── config.json     # Project-managed acc config
-├── cabal-template/      # Template files
-│   ├── Main.hs         # Solution template
-│   ├── hie.yaml        # HLS configuration
-│   └── task.cabal      # Cabal configuration template
+├── flake.nix                # Nix flake with haskell.nix
+├── flake.lock               # Nix lock file
+├── cabal.project            # Cabal project configuration
+├── nix/                     # External package definitions
+│   ├── aclogin.nix          # aclogin package
+│   └── atcoder-cli.nix      # atcoder-cli package
+├── acc-config/              # atcoder-cli configuration
+│   ├── config.json          # Project-managed acc config
+│   └── haskell/             # Haskell template for atcoder-cli
+│       ├── Main.hs          # Solution template
+│       └── template.json    # Template configuration
+├── cabal-template/          # Template files
+│   ├── hie.yaml             # HLS configuration template
+│   └── task.cabal           # Cabal configuration template
 ├── scripts/
-│   ├── new.sh          # Contest creation script
-│   ├── test.sh         # Test execution script
-│   ├── run.sh          # Execution script
-│   └── setup-acc-config.sh # Setup acc configuration
-└── contests/            # Contest directory
-    └── abc321/          # Example: ABC321 contest
-        ├── a/           # Problem A directory
-        │   ├── Main.hs # Problem A solution
-        │   └── tests/  # Test cases
+│   ├── new.sh               # Contest creation script
+│   ├── test.sh              # Test execution script
+│   ├── run.sh               # Execution script
+│   └── setup-acc-config.sh  # Setup acc configuration
+└── contests/                # Contest directory
+    └── abc321/              # Example: ABC321 contest
+        ├── a/               # Problem A directory
+        │   ├── Main.hs      # Problem A solution
+        │   └── tests/       # Test cases
         ├── b/
         │   └── ...
         ├── ...
-        ├── abc321.cabal # Cabal file for the contest
-        ├── hie.yaml     # HLS configuration
+        ├── abc321.cabal     # Cabal file for the contest
+        ├── hie.yaml         # HLS configuration
         └── contest.acc.json # AtCoder CLI configuration
 ```
 

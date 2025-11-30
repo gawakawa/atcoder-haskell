@@ -25,9 +25,8 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
   - `t`: test current problem
 
 ## Project Structure
-- Main solutions: `contests/[contest-id]/[problem-id]/Main.hs`
+- Main solutions: `contests/[contest-id]/[problem-id]/Main.hs` (auto-generated from atcoder-cli template)
 - Test cases: `contests/[contest-id]/[problem-id]/tests/sample-N.in`/`.out`
-- Template: `cabal-template/Main.hs` (copied when creating new contests)
 - Cabal files: `[contest-id].cabal` generated per contest directory
 - hie.yaml: Auto-generated per contest directory for HLS
 
