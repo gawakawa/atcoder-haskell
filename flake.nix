@@ -55,6 +55,96 @@
             nixfmt.enable = true;
           };
         };
+
+        aclogin =
+          with pkgs.python3Packages;
+          pkgs.python3Packages.buildPythonApplication {
+            name = "aclogin";
+            version = "0.0.1";
+            format = "setuptools";
+            src = pkgs.fetchFromGitHub {
+              owner = "key-moon";
+              repo = "aclogin";
+              rev = "e461311c0326578b16d1488be84261f4b24f6134";
+              fetchSubmodules = false;
+              sha256 = "sha256-kyU7KpFenFb7obwSrDp6dPfuE+36r0BGYerrJj3+EyA=";
+            };
+            dependencies = [
+              appdirs
+              requests
+            ];
+            propagatedBuildInputs = [ setuptools ];
+          };
+
+        atcoder-cli = pkgs.buildNpmPackage {
+          pname = "atcoder-cli";
+          version = "2.2.0";
+
+          src = pkgs.fetchFromGitHub {
+            owner = "Tatamo";
+            repo = "atcoder-cli";
+            rev = "v2.2.0";
+            hash = "sha256-7pbCTgWt+khKVyMV03HanvuOX2uAC0PL9OLmqly7IWE=";
+          };
+
+          npmDepsHash = "sha256-ufG7Fq5D2SOzUp8KYRYUB5tYJYoADuhK+2zDfG0a3ks=";
+
+          nativeBuildInputs = [ pkgs.nodejs_20 ];
+
+          NODE_OPTIONS = "--openssl-legacy-provider";
+
+          dontNpmBuild = true;
+        };
+
+        # Script wrappers
+        new-script =
+          (pkgs.writeScriptBin "new.sh" (builtins.readFile ./scripts/new.sh)).overrideAttrs
+            (old: {
+              buildCommand = "${old.buildCommand}\n patchShebangs $out";
+            });
+        new-wrapped = pkgs.symlinkJoin {
+          name = "new";
+          paths = [
+            new-script
+          ]
+          ++ [
+            atcoder-cli
+            pkgs.online-judge-tools
+            pkgs.jq
+            pkgs.git
+          ];
+          buildInputs = [ pkgs.makeWrapper ];
+          postBuild = "wrapProgram $out/bin/new.sh --prefix PATH : $out/bin";
+        };
+
+        test-script =
+          (pkgs.writeScriptBin "test.sh" (builtins.readFile ./scripts/test.sh)).overrideAttrs
+            (old: {
+              buildCommand = "${old.buildCommand}\n patchShebangs $out";
+            });
+        test-wrapped = pkgs.symlinkJoin {
+          name = "test";
+          paths = [
+            test-script
+          ]
+          ++ [
+            pkgs.online-judge-tools
+          ];
+          buildInputs = [ pkgs.makeWrapper ];
+          postBuild = "wrapProgram $out/bin/test.sh --prefix PATH : $out/bin";
+        };
+
+        run-script =
+          (pkgs.writeScriptBin "run.sh" (builtins.readFile ./scripts/run.sh)).overrideAttrs
+            (old: {
+              buildCommand = "${old.buildCommand}\n patchShebangs $out";
+            });
+        run-wrapped = pkgs.symlinkJoin {
+          name = "run";
+          paths = [ run-script ];
+          buildInputs = [ pkgs.makeWrapper ];
+          postBuild = "wrapProgram $out/bin/run.sh --prefix PATH : $out/bin";
+        };
       in
       flake
       // {
@@ -66,17 +156,16 @@
           default = pkgs.mkShell {
             inputsFrom = [ flake.devShells.default ];
             packages = [
+              aclogin
+              atcoder-cli
               pkgs.online-judge-tools
               pkgs.online-judge-verify-helper
+              new-wrapped
+              test-wrapped
+              run-wrapped
             ];
             shellHook = ''
               export ROOT="$PWD"
-
-              alias t='$ROOT/scripts/test.sh $(basename $PWD)'
-
-              new() {
-                  $ROOT/scripts/new.sh $1
-              }
             '';
           };
         };

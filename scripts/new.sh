@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 if [ $# -ne 1 ]; then
   echo "Usage: $0 contest-id"
@@ -6,7 +6,7 @@ if [ $# -ne 1 ]; then
 fi
 
 CONTEST_ID=$1
-ROOT_DIR=$(dirname "$(realpath "$0")")
+ROOT_DIR=$ROOT
 
 # コンテストディレクトリ作成
 mkdir -p contests
