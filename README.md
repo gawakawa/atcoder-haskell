@@ -8,17 +8,21 @@ nix develop
 # Create a new contest
 ./new.sh abc321
 
-# Implement and run tests
-../../test.sh a
+# Navigate to problem directory
+cd contests/abc321/a
 
-# Submit by pasting your code
+# Run tests
+t  # alias for ../../test.sh $(basename $PWD)
+
+# Submit solution
+s  # alias for acc s
 ```
 
 ## Directory Structure
 
 ```
-atcoder/
-├── flake.nix            # Nix environment definition
+atcoder-haskell/
+├── flake.nix            # Nix flake with haskell.nix
 ├── flake.lock           # Nix lock file
 ├── cabal.project        # Cabal project configuration
 ├── cabal-template/      # Template files
@@ -28,6 +32,7 @@ atcoder/
 ├── new.sh               # Contest creation script
 ├── test.sh              # Test execution script
 ├── run.sh               # Execution script
+├── submit.sh            # Submission script
 └── contests/            # Contest directory
     └── abc321/          # Example: ABC321 contest
         ├── a/           # Problem A directory
@@ -36,7 +41,7 @@ atcoder/
         ├── b/
         │   └── ...
         ├── ...
-        ├── abc123.cabal # Cabal file for the contest
+        ├── abc321.cabal # Cabal file for the contest
         ├── hie.yaml     # HLS configuration
         └── contest.acc.json # AtCoder CLI configuration
 ```
