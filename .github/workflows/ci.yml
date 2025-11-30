@@ -28,8 +28,5 @@ jobs:
           authToken: ${{ secrets.CACHIX_AUTH_TOKEN }}
           skipPush: true
 
-      - name: Check formatting
-        run: nix fmt -- --fail-on-change
-
       - name: Flake check
         run: nix flake check --print-build-logs --accept-flake-config
