@@ -3,16 +3,16 @@
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
 ## Commands
-- Create new contest: `./new.sh [contest-id]` (from repository root)
-- Test problem: `./test.sh [problem-id]` or `t` (from contest directory)
-- Run with first test case: `./run.sh [contest-id] [problem-id]` (from repository root)
-- Submit solution: `./submit.sh [problem-id]` or `s` (from contest directory)
+- Create new contest: `./scripts/new.sh [contest-id]` (from repository root)
+- Test problem: `./scripts/test.sh [problem-id]` or `t` (from contest directory)
+- Run with first test case: `./scripts/run.sh [contest-id] [problem-id]` (from repository root)
+- Submit solution: `./scripts/submit.sh [problem-id]` or `s` (from contest directory)
 - Format code: `nix fmt` (runs fourmolu, nixfmt, cabal-fmt via treefmt-nix)
 
 ## Development Environment
 - Enter dev shell: `nix develop`
 - Shell aliases:
-  - `t`: `./test.sh $(basename $PWD)` (test current problem)
+  - `t`: `./scripts/test.sh $(basename $PWD)` (test current problem)
   - `s`: `acc s` (submit current problem)
   - `ts`: `t && s` (test then submit)
   - `new [contest-id]`: create new contest

@@ -93,12 +93,12 @@
               acc config oj-path $(which oj)
               export ROOT="$PWD"
 
-              alias t='$ROOT/test.sh $(basename $PWD)'
+              alias t='$ROOT/scripts/test.sh $(basename $PWD)'
               alias s='acc s'
               alias ts='t && s'
 
               new() {
-                  $ROOT/new.sh $1
+                  $ROOT/scripts/new.sh $1
               }
             '';
           };
