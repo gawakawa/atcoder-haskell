@@ -4,24 +4,22 @@
 module Main where
 
 import Control.Applicative (liftA3)
-import Control.Arrow ((>>>))
 import Control.Monad (replicateM)
 import Data.Array.Unboxed (UArray, bounds, listArray, range, (!))
 import Data.Char (digitToInt, intToDigit)
-import Data.Functor ((<&>))
 import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
-import qualified Data.ByteString.Char8 as BS
-import qualified Data.HashMap.Strict as HM
-import qualified Data.HashSet as HS
-import qualified Data.IntMap.Strict as IM
-import qualified Data.IntSet as IS
-import qualified Data.Map.Strict as M
-import qualified Data.Sequence as Seq
-import qualified Data.Set as S
-import qualified Data.Vector.Unboxed as VU
+import Data.ByteString.Char8 qualified as BS
+import Data.HashMap.Strict qualified as HM
+import Data.HashSet qualified as HS
+import Data.IntMap.Strict qualified as IM
+import Data.IntSet qualified as IS
+import Data.Map.Strict qualified as M
+import Data.Sequence qualified as Seq
+import Data.Set qualified as S
+import Data.Vector.Unboxed qualified as VU
 
 main :: IO ()
 main = do
@@ -29,13 +27,13 @@ main = do
 
 -- my lib
 ints :: IO [Int]
-ints = BS.getLine <&> (BS.words >>> map (BS.readInt >>> fromJust >>> fst))
+ints = map (fst . fromJust . BS.readInt) . BS.words <$> BS.getLine
 
 integers :: IO [Integer]
-integers = BS.getLine <&> (BS.words >>> map (BS.readInteger >>> fromJust >>> fst))
+integers = map (fst . fromJust . BS.readInteger) . BS.words <$> BS.getLine
 
 intMat :: Int -> Int -> IO (UArray (Int, Int) Int)
-intMat h w = replicateM h ints <&> (concat >>> listArray @UArray ((1, 1), (h, w)))
+intMat h w = listArray @UArray ((1, 1), (h, w)) . concat <$> replicateM h ints
 
 showIntMat :: UArray (Int, Int) Int -> String
 showIntMat mat =
