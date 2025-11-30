@@ -23,11 +23,6 @@ sed -i "s/contest-template/${CONTEST_ID}/g" "${CONTEST_ID}.cabal"
 
 # 動的にタスクごとの設定を追加
 for task in $TASKS; do
-  # ディレクトリとMain.hsを作成
-  mkdir -p "$task"
-  cp "$ROOT_DIR/cabal-template/Main.hs" "$task/Main.hs"
-  echo "Created directory and template for task $task"
-
   # cabalファイルに追記
   cat >> "${CONTEST_ID}.cabal" << EOL
 
@@ -47,10 +42,6 @@ for task in $TASKS; do
       component: "${CONTEST_ID}:exe:$task"
 EOL
 done
-
-# acc config 設定
-cd "$ROOT_DIR"
-acc config default-task-choice all
 
 # Cabalでビルド
 cd "$ROOT_DIR/contests/$CONTEST_ID"

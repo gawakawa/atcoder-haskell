@@ -10,17 +10,17 @@ AtCoder competitive programming environment using Haskell with GHC 9.8.4, matchi
    cd atcoder-haskell
    direnv allow
    ```
-3. Login to AtCoder (first time only):
+3. Setup atcoder-cli configuration (first time only):
    ```bash
+   # Setup atcoder-cli configuration
+   setup-acc-config.sh
+
    # Setup browser cookie for CLI tools
    # See: https://github.com/key-moon/aclogin
    aclogin
 
    # Login to atcoder-cli
    acc login
-
-   # Setup atcoder-cli configuration
-   setup-acc-config.sh
    ```
 
 ## Usage
