@@ -48,10 +48,9 @@ atcoder-haskell/
 │   ├── config.json          # Project-managed acc config
 │   └── haskell/             # Haskell template for atcoder-cli
 │       ├── Main.hs          # Solution template
-│       └── template.json    # Template configuration
-├── cabal-template/          # Template files
-│   ├── hie.yaml             # HLS configuration template
-│   └── task.cabal           # Cabal configuration template
+│       ├── template.json    # Template configuration
+│       ├── template.cabal   # Cabal configuration template
+│       └── hie.yaml         # HLS configuration template
 ├── scripts/
 │   ├── new.sh               # Contest creation script
 │   ├── test.sh              # Test execution script

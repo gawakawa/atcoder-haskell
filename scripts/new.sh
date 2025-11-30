@@ -18,8 +18,8 @@ cd $CONTEST_ID || exit 1
 TASKS=$(jq -r '.tasks[].directory.path' contest.acc.json)
 
 # cabalファイルをテンプレートからコピーして編集
-cp "$ROOT_DIR/cabal-template/task.cabal" "${CONTEST_ID}.cabal"
-sed -i "s/contest-template/${CONTEST_ID}/g" "${CONTEST_ID}.cabal"
+cp "$ROOT_DIR/acc-config/haskell/template.cabal" "${CONTEST_ID}.cabal"
+sed -i "s/template/${CONTEST_ID}/g" "${CONTEST_ID}.cabal"
 
 # 動的にタスクごとの設定を追加
 for task in $TASKS; do
@@ -34,7 +34,7 @@ EOL
 done
 
 # hie.yamlをテンプレートからコピーして編集
-cp "$ROOT_DIR/cabal-template/hie.yaml" hie.yaml
+cp "$ROOT_DIR/acc-config/haskell/hie.yaml" hie.yaml
 
 for task in $TASKS; do
   cat >> hie.yaml << EOL
