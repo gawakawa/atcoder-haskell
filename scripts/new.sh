@@ -14,37 +14,12 @@ cd contests || exit 1
 acc new $CONTEST_ID
 cd $CONTEST_ID || exit 1
 
-# contest.acc.jsonからタスク一覧を取得
-TASKS=$(jq -r '.tasks[].label | ascii_downcase' contest.acc.json)
+# contest.acc.jsonからタスク情報を取得（directoryのpathを使用）
+TASKS=$(jq -r '.tasks[].directory.path' contest.acc.json)
 
-# cabalファイルを最初から作成
-cat > "${CONTEST_ID}.cabal" << EOL
-cabal-version: 3.0
-name:          ${CONTEST_ID}
-version:       0.1.0.0
-build-type:    Simple
-
-common deps
-  build-depends:
-    , base
-    , array
-    , attoparsec
-    , bytestring
-    , containers
-    , deepseq
-    , extra
-    , mtl
-    , parsec
-    , text
-    , transformers
-    , unordered-containers
-    , vector
-
-  default-language: GHC2021
-  ghc-options:
-    -threaded -rtsopts -with-rtsopts=-N -Wall -O2 -optc-O3
-
-EOL
+# cabalファイルをテンプレートからコピーして編集
+cp "$ROOT_DIR/cabal-template/task.cabal" "${CONTEST_ID}.cabal"
+sed -i "s/contest-template/${CONTEST_ID}/g" "${CONTEST_ID}.cabal"
 
 # 動的にタスクごとの設定を追加
 for task in $TASKS; do
@@ -52,26 +27,24 @@ for task in $TASKS; do
   mkdir -p "$task"
   cp "$ROOT_DIR/cabal-template/Main.hs" "$task/Main.hs"
   echo "Created directory and template for task $task"
-  
+
   # cabalファイルに追記
   cat >> "${CONTEST_ID}.cabal" << EOL
+
 executable $task
   import:         deps
   main-is:        Main.hs
   hs-source-dirs: $task
-
 EOL
 done
 
-# hie.yamlを生成
-echo "cradle:" > hie.yaml
-echo "  cabal:" >> hie.yaml
+# hie.yamlをテンプレートからコピーして編集
+cp "$ROOT_DIR/cabal-template/hie.yaml" hie.yaml
 
 for task in $TASKS; do
   cat >> hie.yaml << EOL
     - path: "./$task/Main.hs"
       component: "${CONTEST_ID}:exe:$task"
-
 EOL
 done
 
