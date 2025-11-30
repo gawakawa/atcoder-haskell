@@ -1,0 +1,36 @@
+name: "Update Flake Lock"
+
+on:
+  workflow_dispatch: # Allow manual trigger
+  schedule:
+    - cron: "0 15 * * 0" # Run every Monday at 00:00 JST (Sunday 15:00 UTC)
+
+jobs:
+  update-flake-lock:
+    permissions:
+      contents: write
+      pull-requests: write
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v5
+
+      - name: Install Nix
+        uses: cachix/install-nix-action@v31
+        with:
+          github_access_token: ${{ secrets.GITHUB_TOKEN }}
+          extra_nix_config: |
+            extra-substituters = https://cache.iog.io
+            extra-trusted-public-keys = hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ=
+
+      - name: Update flake.lock
+        id: update
+        uses: DeterminateSystems/update-flake-lock@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Enable auto-merge
+        if: ${{ steps.update.outputs.pull-request-number }}
+        run: gh pr merge --auto --merge ${{ steps.update.outputs.pull-request-number }}
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
