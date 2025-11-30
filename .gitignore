@@ -109,6 +109,9 @@ bench.html
 # direnv
 .envrc
 
+# atcoder-cli session (contains login credentials)
+acc-config/session.json
+
 ## Release Scripts
 
 # ignore the downloaded binary files

@@ -87,6 +87,11 @@
         ];
 
         run-wrapped = mkWrappedScript "run" ./scripts/run.sh [ ];
+
+        setup-acc-config-wrapped = mkWrappedScript "setup-acc-config" ./scripts/setup-acc-config.sh [
+          atcoder-cli
+          pkgs.online-judge-tools
+        ];
       in
       flake
       // {
@@ -105,6 +110,7 @@
               new-wrapped
               test-wrapped
               run-wrapped
+              setup-acc-config-wrapped
             ];
             shellHook = ''
               export ROOT="$PWD"

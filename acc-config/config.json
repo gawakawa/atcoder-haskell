@@ -1,0 +1,8 @@
+{
+	"oj-path": "/nix/store/9ky16bjkrdr0dvjryxdsdwxw45x63293-setup-acc-config/bin/oj",
+	"default-contest-dirname-format": "{ContestID}",
+	"default-task-dirname-format": "{tasklabel}",
+	"default-test-dirname-format": "tests",
+	"default-task-choice": "all",
+	"default-template": ""
+}

@@ -18,6 +18,9 @@ AtCoder competitive programming environment using Haskell with GHC 9.8.4, matchi
 
    # Login to atcoder-cli
    acc login
+
+   # Setup atcoder-cli configuration
+   setup-acc-config.sh
    ```
 
 ## Usage
@@ -41,6 +44,8 @@ atcoder-haskell/
 ├── nix/                 # External package definitions
 │   ├── aclogin.nix     # aclogin package
 │   └── atcoder-cli.nix # atcoder-cli package
+├── acc-config/          # atcoder-cli configuration
+│   └── config.json     # Project-managed acc config
 ├── cabal-template/      # Template files
 │   ├── Main.hs         # Solution template
 │   ├── hie.yaml        # HLS configuration
@@ -48,7 +53,8 @@ atcoder-haskell/
 ├── scripts/
 │   ├── new.sh          # Contest creation script
 │   ├── test.sh         # Test execution script
-│   └── run.sh          # Execution script
+│   ├── run.sh          # Execution script
+│   └── setup-acc-config.sh # Setup acc configuration
 └── contests/            # Contest directory
     └── abc321/          # Example: ABC321 contest
         ├── a/           # Problem A directory
