@@ -31,7 +31,7 @@ new.sh abc321
 
 # Navigate to problem directory and test
 cd contests/abc321/a
-t  # Run tests for current problem
+test.sh a  # Run tests for current problem
 ```
 
 ## Directory Structure
