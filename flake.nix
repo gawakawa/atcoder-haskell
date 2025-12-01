@@ -92,6 +92,10 @@
           atcoder-cli
           pkgs.online-judge-tools
         ];
+
+        copy-wrapped = mkWrappedScript "copy" ./scripts/copy.sh [
+          pkgs.wl-clipboard
+        ];
       in
       flake
       // {
@@ -111,6 +115,7 @@
               test-wrapped
               run-wrapped
               setup-acc-config-wrapped
+              copy-wrapped
             ];
             shellHook = ''
               export ROOT="$PWD"
