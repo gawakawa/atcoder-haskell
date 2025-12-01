@@ -21,6 +21,9 @@ TASKS=$(jq -r '.tasks[].directory.path' contest.acc.json)
 cp "$ROOT_DIR/acc-config/haskell/template.cabal" "${CONTEST_ID}.cabal"
 sed -i "s/template/${CONTEST_ID}/g" "${CONTEST_ID}.cabal"
 
+# テンプレート用のexecutableセクションを削除
+sed -i '/^executable main$/,/^$/d' "${CONTEST_ID}.cabal"
+
 # 動的にタスクごとの設定を追加
 for task in $TASKS; do
   # cabalファイルに追記

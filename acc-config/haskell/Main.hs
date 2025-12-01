@@ -11,15 +11,15 @@ import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
 
-import qualified Data.ByteString.Char8 as BS
-import qualified Data.HashMap.Strict as HM
-import qualified Data.HashSet as HS
-import qualified Data.IntMap.Strict as IM
-import qualified Data.IntSet as IS
-import qualified Data.Map.Strict as M
-import qualified Data.Sequence as Seq
-import qualified Data.Set as S
-import qualified Data.Vector.Unboxed as VU
+import Data.ByteString.Char8 qualified as BS
+import Data.HashMap.Strict qualified as HM
+import Data.HashSet qualified as HS
+import Data.IntMap.Strict qualified as IM
+import Data.IntSet qualified as IS
+import Data.Map.Strict qualified as M
+import Data.Sequence qualified as Seq
+import Data.Set qualified as S
+import Data.Vector.Unboxed qualified as VU
 
 main :: IO ()
 main = do

@@ -25,3 +25,8 @@ common deps
 library
   import:          deps
   exposed-modules:
+
+executable main
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: .

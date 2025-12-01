@@ -1,6 +1,6 @@
 column-limit: 80
 function-arrows: leading
-import-export-style: leading
+import-export-style: trailing
 import-grouping: by-qualified
 in-style: left-align
 let-style: newline
