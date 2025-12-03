@@ -1,0 +1,787 @@
+cabal-version: 3.0
+name:          tessoku-book
+version:       0.1.0.0
+build-type:    Simple
+
+common deps
+  build-depends:
+    , array
+    , attoparsec
+    , base
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , mtl
+    , parsec
+    , text
+    , transformers
+    , unordered-containers
+    , vector
+
+  default-language: GHC2021
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall -O2 -optc-O3
+
+library
+  import:          deps
+  exposed-modules:
+
+executable main
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: .
+
+executable a01
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a01
+
+executable a02
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a02
+
+executable a03
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a03
+
+executable a04
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a04
+
+executable a05
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a05
+
+executable a06
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a06
+
+executable a07
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a07
+
+executable a08
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a08
+
+executable a09
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a09
+
+executable a10
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a10
+
+executable a11
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a11
+
+executable a12
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a12
+
+executable a13
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a13
+
+executable a14
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a14
+
+executable a15
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a15
+
+executable a16
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a16
+
+executable a17
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a17
+
+executable a18
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a18
+
+executable a19
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a19
+
+executable a20
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a20
+
+executable a21
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a21
+
+executable a22
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a22
+
+executable a23
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a23
+
+executable a24
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a24
+
+executable a25
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a25
+
+executable a26
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a26
+
+executable a27
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a27
+
+executable a28
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a28
+
+executable a29
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a29
+
+executable a30
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a30
+
+executable a31
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a31
+
+executable a32
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a32
+
+executable a33
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a33
+
+executable a34
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a34
+
+executable a35
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a35
+
+executable a36
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a36
+
+executable a37
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a37
+
+executable a38
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a38
+
+executable a39
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a39
+
+executable a40
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a40
+
+executable a41
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a41
+
+executable a42
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a42
+
+executable a43
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a43
+
+executable a44
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a44
+
+executable a45
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a45
+
+executable a46
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a46
+
+executable a49
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a49
+
+executable a50
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a50
+
+executable a51
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a51
+
+executable a52
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a52
+
+executable a53
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a53
+
+executable a54
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a54
+
+executable a55
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a55
+
+executable a56
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a56
+
+executable a57
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a57
+
+executable a58
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a58
+
+executable a59
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a59
+
+executable a60
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a60
+
+executable a61
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a61
+
+executable a62
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a62
+
+executable a63
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a63
+
+executable a64
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a64
+
+executable a65
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a65
+
+executable a66
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a66
+
+executable a67
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a67
+
+executable a68
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a68
+
+executable a69
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a69
+
+executable a70
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a70
+
+executable a71
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a71
+
+executable a72
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a72
+
+executable a73
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a73
+
+executable a74
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a74
+
+executable a75
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a75
+
+executable a76
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a76
+
+executable a77
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a77
+
+executable b01
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b01
+
+executable b02
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b02
+
+executable b03
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b03
+
+executable b04
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b04
+
+executable b06
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b06
+
+executable b07
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b07
+
+executable b08
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b08
+
+executable b09
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b09
+
+executable b11
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b11
+
+executable b12
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b12
+
+executable b13
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b13
+
+executable b14
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b14
+
+executable b16
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b16
+
+executable b17
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b17
+
+executable b18
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b18
+
+executable b19
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b19
+
+executable b20
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b20
+
+executable b21
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b21
+
+executable b23
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b23
+
+executable b24
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b24
+
+executable b26
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b26
+
+executable b27
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b27
+
+executable b28
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b28
+
+executable b29
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b29
+
+executable b30
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b30
+
+executable b31
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b31
+
+executable b32
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b32
+
+executable b33
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b33
+
+executable b34
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b34
+
+executable b36
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b36
+
+executable b37
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b37
+
+executable b38
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b38
+
+executable b39
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b39
+
+executable b40
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b40
+
+executable b41
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b41
+
+executable b42
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b42
+
+executable b43
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b43
+
+executable b44
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b44
+
+executable b45
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b45
+
+executable b51
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b51
+
+executable b52
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b52
+
+executable b54
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b54
+
+executable b55
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b55
+
+executable b56
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b56
+
+executable b57
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b57
+
+executable b58
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b58
+
+executable b59
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b59
+
+executable b61
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b61
+
+executable b62
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b62
+
+executable b63
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b63
+
+executable b64
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b64
+
+executable b65
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b65
+
+executable b66
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b66
+
+executable b67
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b67
+
+executable b68
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b68
+
+executable b69
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b69
+
+executable c01
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c01
+
+executable c02
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c02
+
+executable c03
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c03
+
+executable c04
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c04
+
+executable c05
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c05
+
+executable c06
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c06
+
+executable c07
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c07
+
+executable c08
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c08
+
+executable c09
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c09
+
+executable c10
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c10
+
+executable c11
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c11
+
+executable c12
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c12
+
+executable c13
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c13
+
+executable c14
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c14
+
+executable c15
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c15
+
+executable c16
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c16
+
+executable c17
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c17
+
+executable c18
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c18
+
+executable c19
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c19
+
+executable c20
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c20
