@@ -7,13 +7,13 @@ import Control.Applicative (liftA3)
 import Control.Arrow ((&&&), (***), (>>>))
 import Control.Monad (replicateM)
 import Data.Array.Unboxed
-    ( UArray
-    , accum
-    , accumArray
-    , bounds
-    , elems
-    , listArray
-    , (!)
+    ( UArray,
+      accum,
+      accumArray,
+      bounds,
+      elems,
+      listArray,
+      (!),
     )
 import Data.Bool.HT (if')
 import Data.Char (digitToInt, intToDigit)
