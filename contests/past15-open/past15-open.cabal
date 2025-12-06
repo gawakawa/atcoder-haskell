@@ -1,0 +1,102 @@
+cabal-version: 3.0
+name:          past15-open
+version:       0.1.0.0
+build-type:    Simple
+
+common deps
+  build-depends:
+    , array
+    , attoparsec
+    , base
+    , bytestring
+    , containers
+    , deepseq
+    , extra
+    , mtl
+    , parsec
+    , text
+    , transformers
+    , unordered-containers
+    , vector
+
+  default-language: GHC2021
+  ghc-options:      -threaded -rtsopts -with-rtsopts=-N -Wall -O2 -optc-O3
+
+library
+  import:          deps
+  exposed-modules:
+
+executable a
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: a
+
+executable b
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: b
+
+executable c
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: c
+
+executable d
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: d
+
+executable e
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: e
+
+executable f
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: f
+
+executable g
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: g
+
+executable h
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: h
+
+executable i
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: i
+
+executable j
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: j
+
+executable k
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: k
+
+executable l
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: l
+
+executable m
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: m
+
+executable n
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: n
+
+executable o
+  import:         deps
+  main-is:        Main.hs
+  hs-source-dirs: o

@@ -1,0 +1,174 @@
+{
+  "contest": {
+    "id": "past15-open",
+    "title": "第15回 アルゴリズム実技検定(過去問)",
+    "url": "https://atcoder.jp/contests/past15-open"
+  },
+  "tasks": [
+    {
+      "id": "past202306_a",
+      "label": "A",
+      "title": "Penalty",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_a",
+      "directory": {
+        "path": "a",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_b",
+      "label": "B",
+      "title": "Hall of Fame",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_b",
+      "directory": {
+        "path": "b",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_c",
+      "label": "C",
+      "title": "Drawing Circle",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_c",
+      "directory": {
+        "path": "c",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_d",
+      "label": "D",
+      "title": "Recorder",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_d",
+      "directory": {
+        "path": "d",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_e",
+      "label": "E",
+      "title": "Total Score",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_e",
+      "directory": {
+        "path": "e",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_f",
+      "label": "F",
+      "title": "Numbering",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_f",
+      "directory": {
+        "path": "f",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_g",
+      "label": "G",
+      "title": "N-SAT",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_g",
+      "directory": {
+        "path": "g",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_h",
+      "label": "H",
+      "title": "Magical Sticks Again",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_h",
+      "directory": {
+        "path": "h",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_i",
+      "label": "I",
+      "title": "Maximum GCD",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_i",
+      "directory": {
+        "path": "i",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_j",
+      "label": "J",
+      "title": "Ninja",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_j",
+      "directory": {
+        "path": "j",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_k",
+      "label": "K",
+      "title": "Swap to Sort",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_k",
+      "directory": {
+        "path": "k",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_l",
+      "label": "L",
+      "title": "XOR Matrix",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_l",
+      "directory": {
+        "path": "l",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_m",
+      "label": "M",
+      "title": "Distance on the Line",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_m",
+      "directory": {
+        "path": "m",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_n",
+      "label": "N",
+      "title": "Frequency Table",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_n",
+      "directory": {
+        "path": "n",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    },
+    {
+      "id": "past202306_o",
+      "label": "O",
+      "title": "Number Sequence and Prime",
+      "url": "https://atcoder.jp/contests/past15-open/tasks/past202306_o",
+      "directory": {
+        "path": "o",
+        "testdir": "tests",
+        "submit": "Main.hs"
+      }
+    }
+  ]
+}
