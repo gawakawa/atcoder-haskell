@@ -23,6 +23,8 @@ sed -i "s/template/${CONTEST_ID}/g" "${CONTEST_ID}.cabal"
 
 # テンプレート用のexecutableセクションを削除
 sed -i '/^executable main$/,/^$/d' "${CONTEST_ID}.cabal"
+# ファイル末尾の空行を削除
+sed -i '${/^$/d}' "${CONTEST_ID}.cabal"
 
 # 動的にタスクごとの設定を追加
 for task in $TASKS; do
