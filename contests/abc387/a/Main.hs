@@ -23,7 +23,8 @@ import Data.Vector.Unboxed qualified as VU
 
 main :: IO ()
 main = do
-    undefined
+    [a, b] <- ints
+    print $ (a + b) * (a + b)
 
 -- my lib
 ints :: IO [Int]
