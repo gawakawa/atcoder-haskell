@@ -23,7 +23,9 @@ import Data.Vector.Unboxed qualified as VU
 
 main :: IO ()
 main = do
-    undefined
+    [a, b, c, d] <- ints
+    print $ (a + b) * (c - d)
+    putStrLn "Takahashi"
 
 -- my lib
 ints :: IO [Int]
