@@ -1,0 +1,10 @@
+cradle:
+  cabal:
+    - path: "./a/Main.hs"
+      component: "joi2023yo1b:exe:a"
+    - path: "./b/Main.hs"
+      component: "joi2023yo1b:exe:b"
+    - path: "./c/Main.hs"
+      component: "joi2023yo1b:exe:c"
+    - path: "./d/Main.hs"
+      component: "joi2023yo1b:exe:d"
