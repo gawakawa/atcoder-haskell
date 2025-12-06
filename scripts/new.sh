@@ -21,10 +21,9 @@ TASKS=$(jq -r '.tasks[].directory.path' contest.acc.json)
 cp "$ROOT_DIR/acc-config/haskell/template.cabal" "${CONTEST_ID}.cabal"
 sed -i "s/template/${CONTEST_ID}/g" "${CONTEST_ID}.cabal"
 
-# テンプレート用のexecutableセクションを削除
+# テンプレート用のexecutableセクションを削除（直前の空行も含む）
+sed -i '/^$/{N;/\nexecutable main$/{s/^\n//}}' "${CONTEST_ID}.cabal"
 sed -i '/^executable main$/,/^$/d' "${CONTEST_ID}.cabal"
-# ファイル末尾の空行を削除
-sed -i '${/^$/d}' "${CONTEST_ID}.cabal"
 
 # 動的にタスクごとの設定を追加
 for task in $TASKS; do
