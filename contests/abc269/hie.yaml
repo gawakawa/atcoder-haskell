@@ -1,0 +1,18 @@
+cradle:
+  cabal:
+    - path: "./a/Main.hs"
+      component: "abc269:exe:a"
+    - path: "./b/Main.hs"
+      component: "abc269:exe:b"
+    - path: "./c/Main.hs"
+      component: "abc269:exe:c"
+    - path: "./d/Main.hs"
+      component: "abc269:exe:d"
+    - path: "./e/Main.hs"
+      component: "abc269:exe:e"
+    - path: "./f/Main.hs"
+      component: "abc269:exe:f"
+    - path: "./g/Main.hs"
+      component: "abc269:exe:g"
+    - path: "./ex/Main.hs"
+      component: "abc269:exe:ex"
