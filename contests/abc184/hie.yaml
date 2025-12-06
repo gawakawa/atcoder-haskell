@@ -1,0 +1,14 @@
+cradle:
+  cabal:
+    - path: "./a/Main.hs"
+      component: "abc184:exe:a"
+    - path: "./b/Main.hs"
+      component: "abc184:exe:b"
+    - path: "./c/Main.hs"
+      component: "abc184:exe:c"
+    - path: "./d/Main.hs"
+      component: "abc184:exe:d"
+    - path: "./e/Main.hs"
+      component: "abc184:exe:e"
+    - path: "./f/Main.hs"
+      component: "abc184:exe:f"
