@@ -26,7 +26,6 @@ library
   import:          deps
   exposed-modules:
 
-
 executable a
   import:         deps
   main-is:        Main.hs
