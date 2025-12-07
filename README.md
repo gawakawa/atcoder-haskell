@@ -13,7 +13,7 @@ AtCoder competitive programming environment using Haskell with GHC 9.8.4, matchi
 3. Setup atcoder-cli configuration (first time only):
    ```bash
    # Setup atcoder-cli configuration
-   setup-acc-config.sh
+   setup
 
    # Setup browser cookie for CLI tools
    # See: https://github.com/key-moon/aclogin
@@ -27,13 +27,13 @@ AtCoder competitive programming environment using Haskell with GHC 9.8.4, matchi
 
 ```bash
 # Create a new contest (opens a new shell in the contest directory)
-new.sh abc321
+new abc321
 
 # Test problem
-test.sh a
+t a
 
 # Copy solution to clipboard (for submission)
-copy.sh a
+cl a
 ```
 
 ## Directory Structure
@@ -54,11 +54,11 @@ atcoder-haskell/
 │       ├── template.cabal   # Cabal configuration template
 │       └── hie.yaml         # HLS configuration template
 ├── scripts/
-│   ├── new.sh               # Contest creation script
-│   ├── test.sh              # Test execution script
-│   ├── run.sh               # Execution script
-│   ├── copy.sh              # Copy solution to clipboard
-│   └── setup-acc-config.sh  # Setup acc configuration
+│   ├── new.sh               # Contest creation script (command: new)
+│   ├── test.sh              # Test execution script (command: t)
+│   ├── run.sh               # Execution script (command: run)
+│   ├── copy.sh              # Copy solution to clipboard (command: cl)
+│   └── setup-acc-config.sh  # Setup acc configuration (command: setup)
 └── contests/                # Contest directory
     └── abc321/              # Example: ABC321 contest
         ├── a/               # Problem A directory

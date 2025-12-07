@@ -63,7 +63,7 @@
         mkWrappedScript =
           name: scriptPath: deps:
           let
-            script = (pkgs.writeScriptBin "${name}.sh" (builtins.readFile scriptPath)).overrideAttrs (old: {
+            script = (pkgs.writeScriptBin name (builtins.readFile scriptPath)).overrideAttrs (old: {
               buildCommand = "${old.buildCommand}\n patchShebangs $out";
             });
           in
@@ -71,7 +71,7 @@
             inherit name;
             paths = [ script ] ++ deps;
             buildInputs = [ pkgs.makeWrapper ];
-            postBuild = "wrapProgram $out/bin/${name}.sh --prefix PATH : $out/bin";
+            postBuild = "wrapProgram $out/bin/${name} --prefix PATH : $out/bin";
           };
 
         # Script wrappers
@@ -82,18 +82,18 @@
           pkgs.git
         ];
 
-        test-wrapped = mkWrappedScript "test" ./scripts/test.sh [
+        test-wrapped = mkWrappedScript "t" ./scripts/test.sh [
           pkgs.online-judge-tools
         ];
 
         run-wrapped = mkWrappedScript "run" ./scripts/run.sh [ ];
 
-        setup-acc-config-wrapped = mkWrappedScript "setup-acc-config" ./scripts/setup-acc-config.sh [
+        setup-acc-config-wrapped = mkWrappedScript "setup" ./scripts/setup-acc-config.sh [
           atcoder-cli
           pkgs.online-judge-tools
         ];
 
-        copy-wrapped = mkWrappedScript "copy" ./scripts/copy.sh [
+        copy-wrapped = mkWrappedScript "cl" ./scripts/copy.sh [
           pkgs.wl-clipboard
         ];
       in
