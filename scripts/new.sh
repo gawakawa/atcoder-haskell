@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 if [ $# -ne 1 ]; then
-  echo "Usage: $0 contest-id"
+  echo "Usage: $0 contest-id" >&2
   exit 1
 fi
 
@@ -11,7 +11,7 @@ ROOT_DIR=$ROOT
 # コンテストディレクトリ作成
 mkdir -p contests
 cd contests || exit 1
-acc new $CONTEST_ID
+acc new $CONTEST_ID >&2
 cd $CONTEST_ID || exit 1
 
 # contest.acc.jsonからタスク情報を取得（directoryのpathを使用）
