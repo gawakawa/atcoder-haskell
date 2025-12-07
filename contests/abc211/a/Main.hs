@@ -7,6 +7,7 @@ import Control.Applicative (liftA3)
 import Control.Monad (replicateM)
 import Data.Array.Unboxed (UArray, bounds, listArray, range, (!))
 import Data.Char (digitToInt, intToDigit)
+import Data.Function (on)
 import Data.List (foldl')
 import Data.Maybe (fromJust)
 import Data.Tuple.Extra (both)
@@ -21,9 +22,13 @@ import Data.Sequence qualified as Seq
 import Data.Set qualified as S
 import Data.Vector.Unboxed qualified as VU
 
+solve :: Double -> Double -> Double
+solve a b = (a - b) / 3 + b
+
 main :: IO ()
 main = do
-    undefined
+    [a, b] <- ints
+    print $ (solve `on` fromIntegral) a b
 
 -- my lib
 ints :: IO [Int]
