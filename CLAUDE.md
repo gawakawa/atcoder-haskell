@@ -16,11 +16,12 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 - Create new contest: `new.sh [contest-id]` (from repository root)
 - Test problem: `test.sh [problem-id]` (from contest directory)
 - Run with first test case: `run.sh [contest-id] [problem-id]` (from repository root)
+- Copy solution to clipboard: `copy.sh [problem-id]` (from contest directory)
 - Format code: `nix fmt` (runs fourmolu, nixfmt, cabal-fmt via treefmt-nix)
 
 ## Development Environment
 - Use direnv to automatically load the development environment
-- Scripts (`new.sh`, `test.sh`, `run.sh`) are wrapped by Nix with proper dependencies
+- Scripts (`new.sh`, `test.sh`, `run.sh`, `copy.sh`) are wrapped by Nix with proper dependencies
 
 ## Project Structure
 - Main solutions: `contests/[contest-id]/[problem-id]/Main.hs` (auto-generated from atcoder-cli template)
@@ -50,6 +51,7 @@ The template includes these helper functions:
 - `ceiling :: (Integral a) => a -> a -> a` (ceiling division)
 - `fromBase :: Int -> String -> Int`, `toBase :: Int -> Int -> String` (base conversion)
 - `showIntMat :: UArray (Int, Int) Int -> String` (matrix to string)
+- `unfoldr :: (b -> Maybe (a, b)) -> b -> [a]` (generate list from seed)
 
 ## Build Configuration
 - Language: GHC2021

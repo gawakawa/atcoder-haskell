@@ -32,6 +32,9 @@ new.sh abc321
 # Navigate to problem directory and test
 cd contests/abc321/a
 test.sh a  # Run tests for current problem
+
+# Copy solution to clipboard (for submission)
+copy.sh a
 ```
 
 ## Directory Structure
@@ -55,6 +58,7 @@ atcoder-haskell/
 │   ├── new.sh               # Contest creation script
 │   ├── test.sh              # Test execution script
 │   ├── run.sh               # Execution script
+│   ├── copy.sh              # Copy solution to clipboard
 │   └── setup-acc-config.sh  # Setup acc configuration
 └── contests/                # Contest directory
     └── abc321/              # Example: ABC321 contest
