@@ -58,3 +58,4 @@ git add "contests/$CONTEST_ID"
 git commit -m "🎉 $CONTEST_ID"
 
 echo "Contest directory for $CONTEST_ID has been created successfully!"
+cd "$ROOT_DIR/contests/$CONTEST_ID" && exec $SHELL

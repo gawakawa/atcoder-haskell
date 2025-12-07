@@ -26,12 +26,11 @@ AtCoder competitive programming environment using Haskell with GHC 9.8.4, matchi
 ## Usage
 
 ```bash
-# Create a new contest (from repository root)
+# Create a new contest (opens a new shell in the contest directory)
 new.sh abc321
 
-# Navigate to problem directory and test
-cd contests/abc321/a
-test.sh a  # Run tests for current problem
+# Test problem
+test.sh a
 
 # Copy solution to clipboard (for submission)
 copy.sh a

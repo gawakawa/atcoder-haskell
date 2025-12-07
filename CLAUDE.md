@@ -13,7 +13,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
    ```
 
 ## Commands
-- Create new contest: `new.sh [contest-id]` (from repository root)
+- Create new contest: `new.sh [contest-id]` (opens a new shell in the contest directory)
 - Test problem: `test.sh [problem-id]` (from contest directory)
 - Run with first test case: `run.sh [contest-id] [problem-id]` (from repository root)
 - Copy solution to clipboard: `copy.sh [problem-id]` (from contest directory)
