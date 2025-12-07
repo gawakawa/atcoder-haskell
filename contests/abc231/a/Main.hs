@@ -23,7 +23,8 @@ import Data.Vector.Unboxed qualified as VU
 
 main :: IO ()
 main = do
-    undefined
+    [d] <- ints
+    print @Double $ fromIntegral d / 100
 
 -- my lib
 ints :: IO [Int]
