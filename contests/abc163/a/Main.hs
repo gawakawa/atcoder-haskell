@@ -23,7 +23,8 @@ import Data.Vector.Unboxed qualified as VU
 
 main :: IO ()
 main = do
-    undefined
+    [r] <- ints
+    print @Double $ 2 * pi * fromIntegral r
 
 -- my lib
 ints :: IO [Int]
