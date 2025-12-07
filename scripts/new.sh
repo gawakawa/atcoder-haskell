@@ -9,8 +9,8 @@ CONTEST_ID=$1
 ROOT_DIR=$ROOT
 
 # コンテストディレクトリ作成
-mkdir -p contests
-cd contests || exit 1
+mkdir -p "$ROOT_DIR/contests"
+cd "$ROOT_DIR/contests" || exit 1
 acc new $CONTEST_ID >&2
 cd $CONTEST_ID || exit 1
 
