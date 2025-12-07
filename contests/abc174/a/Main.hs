@@ -23,7 +23,8 @@ import Data.Vector.Unboxed qualified as VU
 
 main :: IO ()
 main = do
-    undefined
+    [x] <- ints
+    putStrLn $ if x >= 30 then "Yes" else "No"
 
 -- my lib
 ints :: IO [Int]
